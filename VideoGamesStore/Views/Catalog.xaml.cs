@@ -10,29 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace VideoGamesStore
+namespace VideoGamesStore.Views
 {
     /// <summary>
-    /// Логика взаимодействия для Authorization.xaml
+    /// Логика взаимодействия для Catalog.xaml
     /// </summary>
-    public partial class Authorization : Window
+    public partial class Catalog : Window
     {
-        public Authorization()
+        public Catalog()
         {
             InitializeComponent();
-        }
-
-        private void openCatalogHowGuest(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void openCatalog(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
