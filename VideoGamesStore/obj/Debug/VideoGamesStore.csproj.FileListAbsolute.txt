@@ -1,0 +1,15 @@
+F:\Programming\VideoGamesStore\VideoGamesStore\bin\Debug\VideoGamesStore.exe.config
+F:\Programming\VideoGamesStore\VideoGamesStore\bin\Debug\VideoGamesStore.exe
+F:\Programming\VideoGamesStore\VideoGamesStore\bin\Debug\VideoGamesStore.pdb
+F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\VideoGamesStore.csproj.AssemblyReference.cache
+F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\Authorization.g.cs
+F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\App.g.cs
+F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\VideoGamesStore_MarkupCompile.cache
+F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\VideoGamesStore_MarkupCompile.lref
+F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\Authorization.baml
+F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\VideoGamesStore.g.resources
+F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\VideoGamesStore.Properties.Resources.resources
+F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\VideoGamesStore.csproj.GenerateResource.cache
+F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\VideoGamesStore.csproj.CoreCompileInputs.cache
+F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\VideoGamesStore.exe
+F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\VideoGamesStore.pdb
