@@ -9,5 +9,6 @@
 
 
 > [!NOTE]
-> Данная ИС не имеет ничего общего с оффициальным сайтом Playerok расположенным по адресу https://playerok3.com/ А также с видеоблогом на YouTube : Playerok расположенным по адресу  https://www.youtube.com/@playerokcom
+> Данная ИС не имеет ничего общего с оффициальным сайтом Playerok расположенным по адресу https://playerok3.com/
+> А также с видеоблогом на YouTube : Playerok расположенным по адресу  https://www.youtube.com/@playerokcom
 
