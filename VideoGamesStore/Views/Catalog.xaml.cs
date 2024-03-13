@@ -19,9 +19,22 @@ namespace VideoGamesStore.Views
     /// </summary>
     public partial class Catalog : Window
     {
-        public Catalog()
+        private Authorization auth;
+        public Catalog(Authorization authorization)
         {
             InitializeComponent();
+            auth = authorization;
+        }
+        private void BackToAuth(object sender, RoutedEventArgs e)
+        {
+            // проверка на открытия окна авторизации для избежания System.OperationException
+            if (auth == null || !auth.IsVisible)
+            {
+                auth = new Authorization();
+            }
+
+            auth.Show();
+            Close();
         }
     }
 }

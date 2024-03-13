@@ -13,3 +13,5 @@ F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\VideoGamesStore.csproj.
 F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\VideoGamesStore.csproj.CoreCompileInputs.cache
 F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\VideoGamesStore.exe
 F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\VideoGamesStore.pdb
+F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\Views\Catalog.g.cs
+F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\Views\Catalog.baml

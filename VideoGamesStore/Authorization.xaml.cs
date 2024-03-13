@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using VideoGamesStore.Views;
 
 namespace VideoGamesStore
 {
@@ -20,19 +21,21 @@ namespace VideoGamesStore
     /// </summary>
     public partial class Authorization : Window
     {
+        Catalog shop;
         public Authorization()
         {
             InitializeComponent();
         }
-
-        private void openCatalogHowGuest(object sender, RoutedEventArgs e)
+        private void OpenCatalogHowGuest(object sender, RoutedEventArgs e)
         {
-
+            shop = new Catalog(this);
+            Close();
+            shop.Show();
         }
 
-        private void openCatalog(object sender, RoutedEventArgs e)
-        {
-
-        }
+        //private void OpenCatalog(object sender, RoutedEventArgs e)
+        //{
+        //    Close();
+        //}
     }
 }
