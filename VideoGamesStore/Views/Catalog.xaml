@@ -8,23 +8,21 @@
         Icon="/Resources/logo.ico"
         Title="Catalog" Height="450" Width="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
-        <Button Grid.Row="0" Grid.Column="0" Name="backToAuth" Click="BackToAuth" FontSize="32" Content="←" Background="white" />
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="70"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" Grid.Column="0" Name="backToAuth" Click="BackToAuth" FontSize="32" Content="←" Background="#9966CC" Foreground="White"/>
+            <Grid Grid.Row="0" Grid.Column="1" Background="#9966CC"/>
+            <TextBlock Text="Playerok" Foreground="White" FontSize="24" FontFamily="Impact" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Grid Grid.Row="0" Grid.Column="2" Background="#9966CC"/>
+        </Grid>
     </Grid>
 </Window>
