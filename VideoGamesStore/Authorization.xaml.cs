@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,11 @@ namespace VideoGamesStore
     public partial class Authorization : Window
     {
         Catalog shop;
+        private string name = "Konstantin";
+        private string firstName = "Pendragon";
+
+        private string login = "admin";
+        private string password = "admin";
         public Authorization()
         {
             InitializeComponent();
@@ -33,9 +39,19 @@ namespace VideoGamesStore
             shop.Show();
         }
 
-        //private void OpenCatalog(object sender, RoutedEventArgs e)
-        //{
-        //    Close();
-        //}
+        private void OpenCatalog(object sender, RoutedEventArgs e)
+        {
+            if (LoginTextBox.Text ==  login && PasswordTextBox.Password == password) 
+            { 
+                shop = new Catalog(this);
+            }
+            else
+            {
+                MessageBox.Show("Неверный логин или пароль");
+                Close();
+            }
+            Close();
+            Show();
+        }
     }
 }

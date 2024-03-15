@@ -32,7 +32,6 @@ namespace VideoGamesStore.Views
             {
                 auth = new Authorization();
             }
-
             auth.Show();
             Close();
         }
