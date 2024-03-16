@@ -101,12 +101,33 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\americanTruck.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\logo.ico" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\battlefield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\civilization.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\cs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\euroTruck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\fortnite.png" />
+    <Resource Include="Resources\hoika.png" />
+    <Resource Include="Resources\stellaris.png" />
+    <Resource Include="Resources\supermarket.png" />
+    <Resource Include="Resources\youtubers.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

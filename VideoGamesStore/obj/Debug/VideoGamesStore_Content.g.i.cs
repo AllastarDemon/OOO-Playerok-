@@ -8,6 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/logo.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/fortnite.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/hoika.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/stellaris.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/supermarket.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/youtubers.png")]
 
 
