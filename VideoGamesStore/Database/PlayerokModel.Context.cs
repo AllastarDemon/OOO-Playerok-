@@ -13,10 +13,10 @@ namespace VideoGamesStore.Database
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class PlayerokEntities : DbContext
+    public partial class PlayerokEntities3 : DbContext
     {
-        public PlayerokEntities()
-            : base("name=PlayerokEntities")
+        public PlayerokEntities3()
+            : base("name=PlayerokEntities3")
         {
         }
     
@@ -25,13 +25,13 @@ namespace VideoGamesStore.Database
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Category> Categories { get; set; }
-        public virtual DbSet<Client> Clients { get; set; }
-        public virtual DbSet<Developer> Developers { get; set; }
-        public virtual DbSet<Request> Requests { get; set; }
-        public virtual DbSet<Role> Roles { get; set; }
+        public virtual DbSet<Category> Category { get; set; }
+        public virtual DbSet<Client> Client { get; set; }
+        public virtual DbSet<Developer> Developer { get; set; }
+        public virtual DbSet<Request> Request { get; set; }
+        public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<Status> Status { get; set; }
-        public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<VideoGame> VideoGames { get; set; }
+        public virtual DbSet<User> User { get; set; }
+        public virtual DbSet<VideoGame> VideoGame { get; set; }
     }
 }

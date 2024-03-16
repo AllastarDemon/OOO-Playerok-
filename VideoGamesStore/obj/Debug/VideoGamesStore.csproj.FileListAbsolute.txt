@@ -15,3 +15,11 @@ F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\VideoGamesStore.exe
 F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\VideoGamesStore.pdb
 F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\Views\Catalog.g.cs
 F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\Views\Catalog.baml
+F:\Programming\VideoGamesStore\VideoGamesStore\bin\Debug\EasyCaptcha.Wpf.dll
+F:\Programming\VideoGamesStore\VideoGamesStore\bin\Debug\EntityFramework.dll
+F:\Programming\VideoGamesStore\VideoGamesStore\bin\Debug\EntityFramework.SqlServer.dll
+F:\Programming\VideoGamesStore\VideoGamesStore\bin\Debug\EasyCaptcha.Wpf.pdb
+F:\Programming\VideoGamesStore\VideoGamesStore\bin\Debug\EntityFramework.xml
+F:\Programming\VideoGamesStore\VideoGamesStore\bin\Debug\EntityFramework.SqlServer.xml
+F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\VideoGamesStore_Content.g.cs
+F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\VideoGam.405F4AC3.Up2Date

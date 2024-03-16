@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище DBCourierModelContainer" CdmEntityContainer="DBCourierEntities">
+    <EntitySetMapping Name="BankCard">
+      <EntityTypeMapping TypeName="DBCourierModel.BankCard">
+        <MappingFragment StoreEntitySet="BankCard">
+          <ScalarProperty Name="BankCardID" ColumnName="BankCardID" />
+          <ScalarProperty Name="BankCardNumber" ColumnName="BankCardNumber" />
+          <ScalarProperty Name="BankCardOwner" ColumnName="BankCardOwner" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Category">
+      <EntityTypeMapping TypeName="DBCourierModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Client">
+      <EntityTypeMapping TypeName="DBCourierModel.Client">
+        <MappingFragment StoreEntitySet="Client">
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="ClientPassportSerial" ColumnName="ClientPassportSerial" />
+          <ScalarProperty Name="ClientPassportNumber" ColumnName="ClientPassportNumber" />
+          <ScalarProperty Name="ClientEmail" ColumnName="ClientEmail" />
+          <ScalarProperty Name="ClientPhone" ColumnName="ClientPhone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order">
+      <EntityTypeMapping TypeName="DBCourierModel.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="OrderClient" ColumnName="OrderClient" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="OrderPoint" ColumnName="OrderPoint" />
+          <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
+          <ScalarProperty Name="OrderCode" ColumnName="OrderCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderProduct">
+      <EntityTypeMapping TypeName="DBCourierModel.OrderProduct">
+        <MappingFragment StoreEntitySet="OrderProduct">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="ProductArticle" ColumnName="ProductArticle" />
+          <ScalarProperty Name="ProductCount" ColumnName="ProductCount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Point">
+      <EntityTypeMapping TypeName="DBCourierModel.Point">
+        <MappingFragment StoreEntitySet="Point">
+          <ScalarProperty Name="PointID" ColumnName="PointID" />
+          <ScalarProperty Name="PointAddress" ColumnName="PointAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product">
+      <EntityTypeMapping TypeName="DBCourierModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="ProductArticle" ColumnName="ProductArticle" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductUnit" ColumnName="ProductUnit" />
+          <ScalarProperty Name="ProductCost" ColumnName="ProductCost" />
+          <ScalarProperty Name="ProductDiscount" ColumnName="ProductDiscount" />
+          <ScalarProperty Name="ProductCategory" ColumnName="ProductCategory" />
+          <ScalarProperty Name="ProductDescription" ColumnName="ProductDescription" />
+          <ScalarProperty Name="ProductProvider" ColumnName="ProductProvider" />
+          <ScalarProperty Name="ProductImage" ColumnName="ProductImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Provider">
+      <EntityTypeMapping TypeName="DBCourierModel.Provider">
+        <MappingFragment StoreEntitySet="Provider">
+          <ScalarProperty Name="ProviderID" ColumnName="ProviderID" />
+          <ScalarProperty Name="ProviderName" ColumnName="ProviderName" />
+          <ScalarProperty Name="ProviderAddress" ColumnName="ProviderAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Role">
+      <EntityTypeMapping TypeName="DBCourierModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Status">
+      <EntityTypeMapping TypeName="DBCourierModel.Status">
+        <MappingFragment StoreEntitySet="Status">
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Unit">
+      <EntityTypeMapping TypeName="DBCourierModel.Unit">
+        <MappingFragment StoreEntitySet="Unit">
+          <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="DBCourierModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserFullName" ColumnName="UserFullName" />
+          <ScalarProperty Name="UserLogin" ColumnName="UserLogin" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="UserRole" ColumnName="UserRole" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

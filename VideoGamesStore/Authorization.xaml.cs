@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using VideoGamesStore.Classes;
 using VideoGamesStore.Views;
+using VideoGamesStore.Database;
 
 namespace VideoGamesStore
 {
@@ -35,14 +36,15 @@ namespace VideoGamesStore
         }
         private void OpenCatalogHowGuest(object sender, RoutedEventArgs e)
         {
+            Helper.user = null;
             shop = new Catalog(this);
             Close();
             shop.Show();
         }
-
         private void OpenCatalog(object sender, RoutedEventArgs e)
         {
-            if (null!= Helper.DB.Users.FirstOrDefault(u => u.UserLogin == LoginTextBox.Text && u.UserPassword == PasswordTextBox.Password)) 
+            Helper.user = Helper.DB.User.Where(x => x.UserLogin == LoginTextBox.Text && x.UserPassword == PasswordTextBox.Password).ToList().FirstOrDefault();
+            if (Helper.user != null) 
             { 
 
                 shop = new Catalog(this);
@@ -54,8 +56,6 @@ namespace VideoGamesStore
                 MessageBox.Show("Неверный логин или пароль");
                 Close();
             }
-            Close();
-            Show();
         }
     }
 }

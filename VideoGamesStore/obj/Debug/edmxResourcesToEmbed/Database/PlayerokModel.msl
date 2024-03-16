@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище PlayerokModelContainer" CdmEntityContainer="PlayerokEntities3">
+    <EntitySetMapping Name="Category">
+      <EntityTypeMapping TypeName="PlayerokModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Client">
+      <EntityTypeMapping TypeName="PlayerokModel.Client">
+        <MappingFragment StoreEntitySet="Client">
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="ClientEmail" ColumnName="ClientEmail" />
+          <ScalarProperty Name="ClientPassportSerial" ColumnName="ClientPassportSerial" />
+          <ScalarProperty Name="ClientPassportNumber" ColumnName="ClientPassportNumber" />
+          <ScalarProperty Name="ClientPhoneNumber" ColumnName="ClientPhoneNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Developer">
+      <EntityTypeMapping TypeName="PlayerokModel.Developer">
+        <MappingFragment StoreEntitySet="Developer">
+          <ScalarProperty Name="DeveloperID" ColumnName="DeveloperID" />
+          <ScalarProperty Name="DeveloperName" ColumnName="DeveloperName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Request">
+      <EntityTypeMapping TypeName="PlayerokModel.Request">
+        <MappingFragment StoreEntitySet="Request">
+          <ScalarProperty Name="RequestID" ColumnName="RequestID" />
+          <ScalarProperty Name="RequestClient" ColumnName="RequestClient" />
+          <ScalarProperty Name="RequestData" ColumnName="RequestData" />
+          <ScalarProperty Name="RequestStatus" ColumnName="RequestStatus" />
+          <ScalarProperty Name="RequestComment" ColumnName="RequestComment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Role">
+      <EntityTypeMapping TypeName="PlayerokModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Status">
+      <EntityTypeMapping TypeName="PlayerokModel.Status">
+        <MappingFragment StoreEntitySet="Status">
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="PlayerokModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserFullName" ColumnName="UserFullName" />
+          <ScalarProperty Name="UserLogin" ColumnName="UserLogin" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="UserRole" ColumnName="UserRole" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VideoGame">
+      <EntityTypeMapping TypeName="PlayerokModel.VideoGame">
+        <MappingFragment StoreEntitySet="VideoGame">
+          <ScalarProperty Name="VideoGameID" ColumnName="VideoGameID" />
+          <ScalarProperty Name="VideoGameName" ColumnName="VideoGameName" />
+          <ScalarProperty Name="VideoGamePrice" ColumnName="VideoGamePrice" />
+          <ScalarProperty Name="VideoGameCategory" ColumnName="VideoGameCategory" />
+          <ScalarProperty Name="VideoGameDiscount" ColumnName="VideoGameDiscount" />
+          <ScalarProperty Name="VideoGameDeveloper" ColumnName="VideoGameDeveloper" />
+          <ScalarProperty Name="VideoGameDescription" ColumnName="VideoGameDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="RequestGame" TypeName="PlayerokModel.RequestGame" StoreEntitySet="RequestGame">
+      <EndProperty Name="Request">
+        <ScalarProperty Name="RequestID" ColumnName="RequestID" />
+      </EndProperty>
+      <EndProperty Name="VideoGame">
+        <ScalarProperty Name="VideoGameID" ColumnName="RequestVideoGameID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

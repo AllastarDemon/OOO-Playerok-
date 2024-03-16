@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PlayerokModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="VideoGame" Relationship="Self.FK_VideoGame_Category" FromRole="Category" ToRole="VideoGame" />
+  </EntityType>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="ClientID" />
+    </Key>
+    <Property Name="ClientID" Type="Int32" Nullable="false" />
+    <Property Name="ClientEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ClientPassportSerial" Type="Int32" Nullable="false" />
+    <Property Name="ClientPassportNumber" Type="Int32" Nullable="false" />
+    <Property Name="ClientPhoneNumber" Type="String" MaxLength="18" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Client_User" FromRole="Client" ToRole="User" />
+    <NavigationProperty Name="Request" Relationship="Self.FK_Request_Client" FromRole="Client" ToRole="Request" />
+  </EntityType>
+  <EntityType Name="Developer">
+    <Key>
+      <PropertyRef Name="DeveloperID" />
+    </Key>
+    <Property Name="DeveloperID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DeveloperName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="VideoGame" Relationship="Self.FK_VideoGame_Developer" FromRole="Developer" ToRole="VideoGame" />
+  </EntityType>
+  <EntityType Name="Request">
+    <Key>
+      <PropertyRef Name="RequestID" />
+    </Key>
+    <Property Name="RequestID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RequestClient" Type="Int32" Nullable="false" />
+    <Property Name="RequestData" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="RequestStatus" Type="Int32" Nullable="false" />
+    <Property Name="RequestComment" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Client" Relationship="Self.FK_Request_Client" FromRole="Request" ToRole="Client" />
+    <NavigationProperty Name="Status" Relationship="Self.FK_Request_Status" FromRole="Request" ToRole="Status" />
+    <NavigationProperty Name="VideoGame" Relationship="Self.RequestGame" FromRole="Request" ToRole="VideoGame" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="Self.FK_User_Role" FromRole="Role" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="StatusID" />
+    </Key>
+    <Property Name="StatusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StatusName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Request" Relationship="Self.FK_Request_Status" FromRole="Status" ToRole="Request" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserFullName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserLogin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserRole" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Client" Relationship="Self.FK_Client_User" FromRole="User" ToRole="Client" />
+    <NavigationProperty Name="Role" Relationship="Self.FK_User_Role" FromRole="User" ToRole="Role" />
+  </EntityType>
+  <EntityType Name="VideoGame">
+    <Key>
+      <PropertyRef Name="VideoGameID" />
+    </Key>
+    <Property Name="VideoGameID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VideoGameName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="VideoGamePrice" Type="Double" Nullable="false" />
+    <Property Name="VideoGameCategory" Type="Int32" Nullable="false" />
+    <Property Name="VideoGameDiscount" Type="Double" Nullable="false" />
+    <Property Name="VideoGameDeveloper" Type="Int32" Nullable="false" />
+    <Property Name="VideoGameDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Category" Relationship="Self.FK_VideoGame_Category" FromRole="VideoGame" ToRole="Category" />
+    <NavigationProperty Name="Developer" Relationship="Self.FK_VideoGame_Developer" FromRole="VideoGame" ToRole="Developer" />
+    <NavigationProperty Name="Request" Relationship="Self.RequestGame" FromRole="VideoGame" ToRole="Request" />
+  </EntityType>
+  <Association Name="FK_VideoGame_Category">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="VideoGame" Type="Self.VideoGame" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="VideoGame">
+        <PropertyRef Name="VideoGameCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Client_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Client" Type="Self.Client" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Client">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Request_Client">
+    <End Role="Client" Type="Self.Client" Multiplicity="1" />
+    <End Role="Request" Type="Self.Request" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="ClientID" />
+      </Principal>
+      <Dependent Role="Request">
+        <PropertyRef Name="RequestClient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VideoGame_Developer">
+    <End Role="Developer" Type="Self.Developer" Multiplicity="1" />
+    <End Role="VideoGame" Type="Self.VideoGame" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Developer">
+        <PropertyRef Name="DeveloperID" />
+      </Principal>
+      <Dependent Role="VideoGame">
+        <PropertyRef Name="VideoGameDeveloper" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Request_Status">
+    <End Role="Status" Type="Self.Status" Multiplicity="1" />
+    <End Role="Request" Type="Self.Request" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="Request">
+        <PropertyRef Name="RequestStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Role">
+    <End Role="Role" Type="Self.Role" Multiplicity="1" />
+    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="UserRole" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RequestGame">
+    <End Role="Request" Type="Self.Request" Multiplicity="*" />
+    <End Role="VideoGame" Type="Self.VideoGame" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="PlayerokEntities3" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Category" EntityType="Self.Category" />
+    <EntitySet Name="Client" EntityType="Self.Client" />
+    <EntitySet Name="Developer" EntityType="Self.Developer" />
+    <EntitySet Name="Request" EntityType="Self.Request" />
+    <EntitySet Name="Role" EntityType="Self.Role" />
+    <EntitySet Name="Status" EntityType="Self.Status" />
+    <EntitySet Name="User" EntityType="Self.User" />
+    <EntitySet Name="VideoGame" EntityType="Self.VideoGame" />
+    <AssociationSet Name="FK_VideoGame_Category" Association="Self.FK_VideoGame_Category">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="VideoGame" EntitySet="VideoGame" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Client_User" Association="Self.FK_Client_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Client" EntitySet="Client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Request_Client" Association="Self.FK_Request_Client">
+      <End Role="Client" EntitySet="Client" />
+      <End Role="Request" EntitySet="Request" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VideoGame_Developer" Association="Self.FK_VideoGame_Developer">
+      <End Role="Developer" EntitySet="Developer" />
+      <End Role="VideoGame" EntitySet="VideoGame" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Request_Status" Association="Self.FK_Request_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="Request" EntitySet="Request" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Role" Association="Self.FK_User_Role">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="RequestGame" Association="Self.RequestGame">
+      <End Role="Request" EntitySet="Request" />
+      <End Role="VideoGame" EntitySet="VideoGame" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

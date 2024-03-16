@@ -17,7 +17,7 @@ namespace VideoGamesStore.Database
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public VideoGame()
         {
-            this.Requests = new HashSet<Request>();
+            this.Request = new HashSet<Request>();
         }
     
         public int VideoGameID { get; set; }
@@ -31,6 +31,6 @@ namespace VideoGamesStore.Database
         public virtual Category Category { get; set; }
         public virtual Developer Developer { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Request> Requests { get; set; }
+        public virtual ICollection<Request> Request { get; set; }
     }
 }

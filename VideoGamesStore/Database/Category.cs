@@ -17,13 +17,13 @@ namespace VideoGamesStore.Database
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Category()
         {
-            this.VideoGames = new HashSet<VideoGame>();
+            this.VideoGame = new HashSet<VideoGame>();
         }
     
         public int CategoryID { get; set; }
         public string CategoryName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<VideoGame> VideoGames { get; set; }
+        public virtual ICollection<VideoGame> VideoGame { get; set; }
     }
 }

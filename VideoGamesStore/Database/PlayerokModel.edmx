@@ -17,7 +17,7 @@
             <PropertyRef Name="ClientID" />
           </Key>
           <Property Name="ClientID" Type="int" Nullable="false" />
-          <Property Name="ClientEmail" Type="nvarchar" MaxLength="75" Nullable="false" />
+          <Property Name="ClientEmail" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="ClientPassportSerial" Type="int" Nullable="false" />
           <Property Name="ClientPassportNumber" Type="int" Nullable="false" />
           <Property Name="ClientPhoneNumber" Type="char" MaxLength="18" />
@@ -233,19 +233,19 @@
           </Key>
           <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="VideoGames" Relationship="Self.FK_VideoGame_Category" FromRole="Category" ToRole="VideoGame" />
+          <NavigationProperty Name="VideoGame" Relationship="Self.FK_VideoGame_Category" FromRole="Category" ToRole="VideoGame" />
         </EntityType>
         <EntityType Name="Client">
           <Key>
             <PropertyRef Name="ClientID" />
           </Key>
           <Property Name="ClientID" Type="Int32" Nullable="false" />
-          <Property Name="ClientEmail" Type="String" MaxLength="75" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ClientEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ClientPassportSerial" Type="Int32" Nullable="false" />
           <Property Name="ClientPassportNumber" Type="Int32" Nullable="false" />
           <Property Name="ClientPhoneNumber" Type="String" MaxLength="18" FixedLength="true" Unicode="false" />
           <NavigationProperty Name="User" Relationship="Self.FK_Client_User" FromRole="Client" ToRole="User" />
-          <NavigationProperty Name="Requests" Relationship="Self.FK_Request_Client" FromRole="Client" ToRole="Request" />
+          <NavigationProperty Name="Request" Relationship="Self.FK_Request_Client" FromRole="Client" ToRole="Request" />
         </EntityType>
         <EntityType Name="Developer">
           <Key>
@@ -253,7 +253,7 @@
           </Key>
           <Property Name="DeveloperID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="DeveloperName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="VideoGames" Relationship="Self.FK_VideoGame_Developer" FromRole="Developer" ToRole="VideoGame" />
+          <NavigationProperty Name="VideoGame" Relationship="Self.FK_VideoGame_Developer" FromRole="Developer" ToRole="VideoGame" />
         </EntityType>
         <EntityType Name="Request">
           <Key>
@@ -266,7 +266,7 @@
           <Property Name="RequestComment" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Client" Relationship="Self.FK_Request_Client" FromRole="Request" ToRole="Client" />
           <NavigationProperty Name="Status" Relationship="Self.FK_Request_Status" FromRole="Request" ToRole="Status" />
-          <NavigationProperty Name="VideoGames" Relationship="Self.RequestGame" FromRole="Request" ToRole="VideoGame" />
+          <NavigationProperty Name="VideoGame" Relationship="Self.RequestGame" FromRole="Request" ToRole="VideoGame" />
         </EntityType>
         <EntityType Name="Role">
           <Key>
@@ -274,7 +274,7 @@
           </Key>
           <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Users" Relationship="Self.FK_User_Role" FromRole="Role" ToRole="User" />
+          <NavigationProperty Name="User" Relationship="Self.FK_User_Role" FromRole="Role" ToRole="User" />
         </EntityType>
         <EntityType Name="Status">
           <Key>
@@ -282,7 +282,7 @@
           </Key>
           <Property Name="StatusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="StatusName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Requests" Relationship="Self.FK_Request_Status" FromRole="Status" ToRole="Request" />
+          <NavigationProperty Name="Request" Relationship="Self.FK_Request_Status" FromRole="Status" ToRole="Request" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -309,7 +309,7 @@
           <Property Name="VideoGameDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Category" Relationship="Self.FK_VideoGame_Category" FromRole="VideoGame" ToRole="Category" />
           <NavigationProperty Name="Developer" Relationship="Self.FK_VideoGame_Developer" FromRole="VideoGame" ToRole="Developer" />
-          <NavigationProperty Name="Requests" Relationship="Self.RequestGame" FromRole="VideoGame" ToRole="Request" />
+          <NavigationProperty Name="Request" Relationship="Self.RequestGame" FromRole="VideoGame" ToRole="Request" />
         </EntityType>
         <Association Name="FK_VideoGame_Category">
           <End Role="Category" Type="Self.Category" Multiplicity="1" />
@@ -387,42 +387,42 @@
           <End Role="Request" Type="Self.Request" Multiplicity="*" />
           <End Role="VideoGame" Type="Self.VideoGame" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="PlayerokEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Categories" EntityType="Self.Category" />
-          <EntitySet Name="Clients" EntityType="Self.Client" />
-          <EntitySet Name="Developers" EntityType="Self.Developer" />
-          <EntitySet Name="Requests" EntityType="Self.Request" />
-          <EntitySet Name="Roles" EntityType="Self.Role" />
+        <EntityContainer Name="PlayerokEntities3" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Category" EntityType="Self.Category" />
+          <EntitySet Name="Client" EntityType="Self.Client" />
+          <EntitySet Name="Developer" EntityType="Self.Developer" />
+          <EntitySet Name="Request" EntityType="Self.Request" />
+          <EntitySet Name="Role" EntityType="Self.Role" />
           <EntitySet Name="Status" EntityType="Self.Status" />
-          <EntitySet Name="Users" EntityType="Self.User" />
-          <EntitySet Name="VideoGames" EntityType="Self.VideoGame" />
+          <EntitySet Name="User" EntityType="Self.User" />
+          <EntitySet Name="VideoGame" EntityType="Self.VideoGame" />
           <AssociationSet Name="FK_VideoGame_Category" Association="Self.FK_VideoGame_Category">
-            <End Role="Category" EntitySet="Categories" />
-            <End Role="VideoGame" EntitySet="VideoGames" />
+            <End Role="Category" EntitySet="Category" />
+            <End Role="VideoGame" EntitySet="VideoGame" />
           </AssociationSet>
           <AssociationSet Name="FK_Client_User" Association="Self.FK_Client_User">
-            <End Role="User" EntitySet="Users" />
-            <End Role="Client" EntitySet="Clients" />
+            <End Role="User" EntitySet="User" />
+            <End Role="Client" EntitySet="Client" />
           </AssociationSet>
           <AssociationSet Name="FK_Request_Client" Association="Self.FK_Request_Client">
-            <End Role="Client" EntitySet="Clients" />
-            <End Role="Request" EntitySet="Requests" />
+            <End Role="Client" EntitySet="Client" />
+            <End Role="Request" EntitySet="Request" />
           </AssociationSet>
           <AssociationSet Name="FK_VideoGame_Developer" Association="Self.FK_VideoGame_Developer">
-            <End Role="Developer" EntitySet="Developers" />
-            <End Role="VideoGame" EntitySet="VideoGames" />
+            <End Role="Developer" EntitySet="Developer" />
+            <End Role="VideoGame" EntitySet="VideoGame" />
           </AssociationSet>
           <AssociationSet Name="FK_Request_Status" Association="Self.FK_Request_Status">
             <End Role="Status" EntitySet="Status" />
-            <End Role="Request" EntitySet="Requests" />
+            <End Role="Request" EntitySet="Request" />
           </AssociationSet>
           <AssociationSet Name="FK_User_Role" Association="Self.FK_User_Role">
-            <End Role="Role" EntitySet="Roles" />
-            <End Role="User" EntitySet="Users" />
+            <End Role="Role" EntitySet="Role" />
+            <End Role="User" EntitySet="User" />
           </AssociationSet>
           <AssociationSet Name="RequestGame" Association="Self.RequestGame">
-            <End Role="Request" EntitySet="Requests" />
-            <End Role="VideoGame" EntitySet="VideoGames" />
+            <End Role="Request" EntitySet="Request" />
+            <End Role="VideoGame" EntitySet="VideoGame" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -430,8 +430,8 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище PlayerokModelContainer" CdmEntityContainer="PlayerokEntities">
-          <EntitySetMapping Name="Categories">
+        <EntityContainerMapping StorageEntityContainer="Хранилище PlayerokModelContainer" CdmEntityContainer="PlayerokEntities3">
+          <EntitySetMapping Name="Category">
             <EntityTypeMapping TypeName="PlayerokModel.Category">
               <MappingFragment StoreEntitySet="Category">
                 <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
@@ -439,7 +439,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Clients">
+          <EntitySetMapping Name="Client">
             <EntityTypeMapping TypeName="PlayerokModel.Client">
               <MappingFragment StoreEntitySet="Client">
                 <ScalarProperty Name="ClientID" ColumnName="ClientID" />
@@ -450,7 +450,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Developers">
+          <EntitySetMapping Name="Developer">
             <EntityTypeMapping TypeName="PlayerokModel.Developer">
               <MappingFragment StoreEntitySet="Developer">
                 <ScalarProperty Name="DeveloperID" ColumnName="DeveloperID" />
@@ -458,7 +458,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Requests">
+          <EntitySetMapping Name="Request">
             <EntityTypeMapping TypeName="PlayerokModel.Request">
               <MappingFragment StoreEntitySet="Request">
                 <ScalarProperty Name="RequestID" ColumnName="RequestID" />
@@ -469,7 +469,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Roles">
+          <EntitySetMapping Name="Role">
             <EntityTypeMapping TypeName="PlayerokModel.Role">
               <MappingFragment StoreEntitySet="Role">
                 <ScalarProperty Name="RoleID" ColumnName="RoleID" />
@@ -485,7 +485,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Users">
+          <EntitySetMapping Name="User">
             <EntityTypeMapping TypeName="PlayerokModel.User">
               <MappingFragment StoreEntitySet="User">
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
@@ -496,7 +496,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="VideoGames">
+          <EntitySetMapping Name="VideoGame">
             <EntityTypeMapping TypeName="PlayerokModel.VideoGame">
               <MappingFragment StoreEntitySet="VideoGame">
                 <ScalarProperty Name="VideoGameID" ColumnName="VideoGameID" />
@@ -531,7 +531,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
