@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using VideoGamesStore.Classes;
 using VideoGamesStore.Views;
 
 namespace VideoGamesStore
@@ -41,9 +42,12 @@ namespace VideoGamesStore
 
         private void OpenCatalog(object sender, RoutedEventArgs e)
         {
-            if (LoginTextBox.Text ==  login && PasswordTextBox.Password == password) 
+            if (null!= Helper.DB.Users.FirstOrDefault(u => u.UserLogin == LoginTextBox.Text && u.UserPassword == PasswordTextBox.Password)) 
             { 
+
                 shop = new Catalog(this);
+                Close();
+                shop.Show();
             }
             else
             {

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1413620117d049698b6f7561286d89b6" Name="Diagram1">
+        <EntityTypeShape EntityType="PlayerokModel.Category" Width="1.5" PointX="7.5" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PlayerokModel.Client" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PlayerokModel.Developer" Width="1.5" PointX="7.5" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PlayerokModel.Request" Width="1.5" PointX="7.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PlayerokModel.Role" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PlayerokModel.Status" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PlayerokModel.User" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PlayerokModel.VideoGame" Width="1.5" PointX="9.75" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="PlayerokModel.FK_VideoGame_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="PlayerokModel.FK_Client_User" ManuallyRouted="false" />
+        <AssociationConnector Association="PlayerokModel.FK_Request_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="PlayerokModel.FK_VideoGame_Developer" ManuallyRouted="false" />
+        <AssociationConnector Association="PlayerokModel.FK_Request_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="PlayerokModel.FK_User_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="PlayerokModel.RequestGame" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

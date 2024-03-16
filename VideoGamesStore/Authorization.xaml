@@ -28,7 +28,7 @@
         <TextBlock Text="Пароль" Foreground="white" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="24" FontFamily="Impact"/>
         <TextBox Name="LoginTextBox" Foreground="white" FontSize="24" Background="Black" Grid.Column="1" Grid.Row="2" Width="140" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="83,0,0,0" Grid.ColumnSpan="2"/>
         <PasswordBox Name="PasswordTextBox" PasswordChar="*" Foreground="white" FontSize="24" Background="Black" Grid.Column="1" Grid.Row="3" Width="140" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="83,0,0,0" Grid.ColumnSpan="2"/>
-        <Button Name="openCatalog" Background="black" Foreground="white" Content="Войти" FontSize="14" FontFamily="Impact" Grid.Column="0" Grid.Row="4" Width="110" Height="45" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="106,0,0,0"/>
+        <Button Name="openCatalog" Click="OpenCatalog" Background="black" Foreground="white" Content="Войти" FontSize="14" FontFamily="Impact" Grid.Column="0" Grid.Row="4" Width="110" Height="45" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="106,0,0,0"/>
         <Button Name="openCatalogHowGuest" Click="OpenCatalogHowGuest" Background="black" Foreground="white" Content="Войти как гость" FontSize="14" FontFamily="Impact" Grid.Column="1" Grid.Row="4" Width="110" Height="45" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="113,0,0,0"/>
     </Grid>
 </Window>

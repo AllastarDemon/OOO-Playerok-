@@ -50,6 +50,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -68,6 +70,46 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classes\Helper.cs" />
+    <Compile Include="Database\Category.cs">
+      <DependentUpon>PlayerokModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Client.cs">
+      <DependentUpon>PlayerokModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Developer.cs">
+      <DependentUpon>PlayerokModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PlayerokModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PlayerokModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PlayerokModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PlayerokModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PlayerokModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PlayerokModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Request.cs">
+      <DependentUpon>PlayerokModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Role.cs">
+      <DependentUpon>PlayerokModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Status.cs">
+      <DependentUpon>PlayerokModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\User.cs">
+      <DependentUpon>PlayerokModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VideoGame.cs">
+      <DependentUpon>PlayerokModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Views\Catalog.xaml.cs">
       <DependentUpon>Catalog.xaml</DependentUpon>
     </Compile>
@@ -106,6 +148,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="Database\PlayerokModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PlayerokModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Database\PlayerokModel.edmx.diagram">
+      <DependentUpon>PlayerokModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -143,8 +192,21 @@
     <Resource Include="Resources\supermarket.png" />
     <Resource Include="Resources\youtubers.png" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Database\" />
+    <Content Include="Database\PlayerokModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>PlayerokModel.Context.cs</LastGenOutput>
+      <DependentUpon>PlayerokModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Database\PlayerokModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PlayerokModel.edmx</DependentUpon>
+      <LastGenOutput>PlayerokModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
