@@ -23,8 +23,8 @@ namespace VideoGamesStore
         {
             Helper.user = Helper.DB.User.Where(x => x.UserLogin == LoginTextBox.Text && x.UserPassword == PasswordTextBox.Password).ToList().FirstOrDefault();
             if (Helper.user != null) 
-            { 
-
+            {
+                MessageBox.Show("Вы вошли как: " + Helper.user.UserFullName);
                 shop = new Catalog(this);
                 Close();
                 shop.Show();
