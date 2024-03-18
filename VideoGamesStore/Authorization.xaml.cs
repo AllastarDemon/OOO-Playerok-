@@ -21,18 +21,25 @@ namespace VideoGamesStore
         }
         private void OpenCatalog(object sender, RoutedEventArgs e)
         {
-            Helper.user = Helper.DB.User.Where(x => x.UserLogin == LoginTextBox.Text && x.UserPassword == PasswordTextBox.Password).ToList().FirstOrDefault();
-            if (Helper.user != null) 
+            if (string.IsNullOrWhiteSpace(LoginTextBox.Text) || string.IsNullOrWhiteSpace(PasswordTextBox.Password))
             {
-                MessageBox.Show("Вы вошли как: " + Helper.user.UserFullName);
-                shop = new Catalog(this);
-                Close();
-                shop.Show();
+                MessageBox.Show("Заполните все поля логина и пароля.");
             }
             else
             {
-                MessageBox.Show("Неверный логин или пароль");
-                Close();
+                Helper.user = Helper.DB.User.Where(x => x.UserLogin == LoginTextBox.Text && x.UserPassword == PasswordTextBox.Password).ToList().FirstOrDefault();
+                if (Helper.user != null)
+                {
+                    MessageBox.Show("Вы вошли как: " + Helper.user.UserFullName);
+                    shop = new Catalog(this);
+                    Close();
+                    shop.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Неверный логин или пароль");
+                    // Оставьте вход открытым, если хотите, чтобы пользователь мог попробовать войти снова.
+                }
             }
         }
     }
