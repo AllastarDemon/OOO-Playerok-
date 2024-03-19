@@ -3,7 +3,27 @@
   "WorkspaceRootPath": "F:\\Programming\\VideoGamesStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|F:\\Programming\\VideoGamesStore\\videogamesstore\\authorization.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|f:\\programming\\videogamesstore\\videogamesstore\\views\\catalog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|solutionrelative:videogamesstore\\views\\catalog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|f:\\programming\\videogamesstore\\videogamesstore\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|solutionrelative:videogamesstore\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|f:\\programming\\videogamesstore\\videogamesstore\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|solutionrelative:videogamesstore\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|f:\\programming\\videogamesstore\\videogamesstore\\authorization.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|solutionrelative:videogamesstore\\authorization.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|f:\\programming\\videogamesstore\\videogamesstore\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|solutionrelative:videogamesstore\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|f:\\programming\\videogamesstore\\videogamesstore\\authorization.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|solutionrelative:videogamesstore\\authorization.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -18,11 +38,73 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Catalog.xaml",
+              "DocumentMoniker": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Views\\Catalog.xaml",
+              "RelativeDocumentMoniker": "VideoGamesStore\\Views\\Catalog.xaml",
+              "ToolTip": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Views\\Catalog.xaml",
+              "RelativeToolTip": "VideoGamesStore\\Views\\Catalog.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-19T13:15:44.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Authorization.xaml",
+              "DocumentMoniker": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Authorization.xaml",
+              "RelativeDocumentMoniker": "VideoGamesStore\\Authorization.xaml",
+              "ToolTip": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Authorization.xaml",
+              "RelativeToolTip": "VideoGamesStore\\Authorization.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-19T13:14:53.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\App.xaml.cs",
+              "RelativeDocumentMoniker": "VideoGamesStore\\App.xaml.cs",
+              "ToolTip": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\App.xaml.cs",
+              "RelativeToolTip": "VideoGamesStore\\App.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T13:14:47.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "App.xaml",
+              "DocumentMoniker": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\App.xaml",
+              "RelativeDocumentMoniker": "VideoGamesStore\\App.xaml",
+              "ToolTip": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\App.xaml",
+              "RelativeToolTip": "VideoGamesStore\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-19T13:14:37.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.config",
+              "DocumentMoniker": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\App.config",
+              "RelativeDocumentMoniker": "VideoGamesStore\\App.config",
+              "ToolTip": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\App.config",
+              "RelativeToolTip": "VideoGamesStore\\App.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-03-19T13:14:32.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Helper.cs",
               "DocumentMoniker": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Classes\\Helper.cs",
               "RelativeDocumentMoniker": "VideoGamesStore\\Classes\\Helper.cs",
@@ -30,12 +112,11 @@
               "RelativeToolTip": "VideoGamesStore\\Classes\\Helper.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T17:44:54.431Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-18T17:44:54.431Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Authorization.xaml.cs",
               "DocumentMoniker": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Authorization.xaml.cs",
               "RelativeDocumentMoniker": "VideoGamesStore\\Authorization.xaml.cs",
