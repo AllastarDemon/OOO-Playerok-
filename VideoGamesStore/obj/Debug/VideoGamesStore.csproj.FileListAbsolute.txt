@@ -23,3 +23,9 @@ F:\Programming\VideoGamesStore\VideoGamesStore\bin\Debug\EntityFramework.xml
 F:\Programming\VideoGamesStore\VideoGamesStore\bin\Debug\EntityFramework.SqlServer.xml
 F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\VideoGamesStore_Content.g.cs
 F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\VideoGam.405F4AC3.Up2Date
+F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\Views\AddProduct.g.cs
+F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\Views\Basket.g.cs
+F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\Views\EditProduct.g.cs
+F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\Views\AddProduct.baml
+F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\Views\Basket.baml
+F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\Views\EditProduct.baml

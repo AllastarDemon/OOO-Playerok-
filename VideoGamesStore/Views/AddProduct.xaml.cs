@@ -1,27 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace VideoGamesStore.Views
 {
-    /// <summary>
-    /// Логика взаимодействия для AddProduct.xaml
-    /// </summary>
     public partial class AddProduct : Window
     {
-        public AddProduct()
+        private Catalog formCatalog;
+        public AddProduct(Catalog catalog)
         {
             InitializeComponent();
+            formCatalog = catalog;
+        }
+        private void BackToCatalog(object sender, RoutedEventArgs e)
+        {
+            // проверка на открытия окна авторизации для избежания System.OperationException
+            if (formCatalog == null || !formCatalog.IsVisible)
+            {
+                formCatalog = new Catalog();
+            }
+            formCatalog.Show();
+            Close();
+        }
+
+        private void AddProductButton(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
