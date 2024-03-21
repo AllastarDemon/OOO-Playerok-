@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 F:\Programming\VideoGamesStore\VideoGamesStore\App.xaml
-21080997712
+5-1365953661
 21194470871
-19-10025494
+221378288887
 19-445616527
-Authorization.xaml;Views\Catalog.xaml;
+Authorization.xaml;Views\AddProduct.xaml;Views\Basket.xaml;Views\Catalog.xaml;Views\EditProduct.xaml;
 
-False
+True
 
