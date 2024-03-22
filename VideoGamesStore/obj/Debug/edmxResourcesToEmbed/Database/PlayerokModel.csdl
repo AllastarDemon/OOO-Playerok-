@@ -80,6 +80,7 @@
     <Property Name="VideoGameDiscount" Type="Double" Nullable="false" />
     <Property Name="VideoGameDeveloper" Type="Int32" Nullable="false" />
     <Property Name="VideoGameDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VideoGameImage" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Category" Relationship="Self.FK_VideoGame_Category" FromRole="VideoGame" ToRole="Category" />
     <NavigationProperty Name="Developer" Relationship="Self.FK_VideoGame_Developer" FromRole="VideoGame" ToRole="Developer" />
     <NavigationProperty Name="Request" Relationship="Self.RequestGame" FromRole="VideoGame" ToRole="Request" />

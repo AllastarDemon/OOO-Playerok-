@@ -11,7 +11,9 @@ namespace VideoGamesStore.Database
 {
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics;
     using System.IO;
+    using System.Windows;
 
     public partial class VideoGame
     {
@@ -46,8 +48,8 @@ namespace VideoGamesStore.Database
         {
             get
             {
-                string path = Environment.CurrentDirectory + @"\..\..\Resources" + VideoGameImage + ".png";
-
+                string path = Environment.CurrentDirectory + @"\..\..\Resources\" + this.VideoGameImage + ".png";
+                
                 if (File.Exists(path))
                     return path;
                 else

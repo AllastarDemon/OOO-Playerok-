@@ -77,6 +77,7 @@
     <Property Name="VideoGameDiscount" Type="float" Nullable="false" />
     <Property Name="VideoGameDeveloper" Type="int" Nullable="false" />
     <Property Name="VideoGameDescription" Type="nvarchar" MaxLength="50" />
+    <Property Name="VideoGameImage" Type="nvarchar" MaxLength="250" />
   </EntityType>
   <Association Name="FK_Client_User">
     <End Role="User" Type="Self.User" Multiplicity="1" />

@@ -76,6 +76,7 @@
           <ScalarProperty Name="VideoGameDiscount" ColumnName="VideoGameDiscount" />
           <ScalarProperty Name="VideoGameDeveloper" ColumnName="VideoGameDeveloper" />
           <ScalarProperty Name="VideoGameDescription" ColumnName="VideoGameDescription" />
+          <ScalarProperty Name="VideoGameImage" ColumnName="VideoGameImage" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
