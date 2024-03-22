@@ -7,11 +7,11 @@
       "RelativeMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|solutionrelative:videogamesstore\\views\\addproduct.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|f:\\programming\\videogamesstore\\videogamesstore\\views\\addproduct.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|F:\\Programming\\VideoGamesStore\\videogamesstore\\views\\addproduct.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|solutionrelative:videogamesstore\\views\\addproduct.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|f:\\programming\\videogamesstore\\videogamesstore\\classes\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|F:\\Programming\\VideoGamesStore\\videogamesstore\\classes\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|solutionrelative:videogamesstore\\classes\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -34,8 +34,7 @@
               "RelativeToolTip": "VideoGamesStore\\Classes\\Helper.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T10:20:12.891Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-22T10:20:12.891Z"
             },
             {
               "$type": "Document",
@@ -45,7 +44,7 @@
               "RelativeDocumentMoniker": "VideoGamesStore\\Views\\AddProduct.xaml.cs",
               "ToolTip": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Views\\AddProduct.xaml.cs",
               "RelativeToolTip": "VideoGamesStore\\Views\\AddProduct.xaml.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAswB0AAAA8AAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAYwB4AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-22T10:12:19.301Z",
               "EditorCaption": ""
@@ -59,8 +58,7 @@
               "ToolTip": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Views\\AddProduct.xaml",
               "RelativeToolTip": "VideoGamesStore\\Views\\AddProduct.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-22T08:30:47.214Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-22T08:30:47.214Z"
             }
           ]
         }

@@ -22,7 +22,7 @@ namespace VideoGamesStore.Views
         private void LoadDevelopersIntoComboBox()
         {
             // Загрузка данных из базы данных
-            var developers = Helper.DB.Developer.ToList();
+            List<Developer> developers = Helper.DB.Developer.ToList();
 
             // Связывание данных с комбобоксом
             DeveloperComboBox.ItemsSource = developers;
@@ -32,10 +32,10 @@ namespace VideoGamesStore.Views
         private void LoadCategoryIntoComboBox()
         {
             // Загрузка данных из базы данных
-            var categoryes = Helper.DB.Category.ToList();
+            List<Category> categories = Helper.DB.Category.ToList();
 
             // Связывание данных с комбобоксом
-            CategoryComboBox.ItemsSource = categoryes;
+            CategoryComboBox.ItemsSource = categories;
             CategoryComboBox.DisplayMemberPath = "CategoryName"; // Устанавливаем свойство для отображения имени разработчика
             CategoryComboBox.SelectedValuePath = "CategoryID";
         }
