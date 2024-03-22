@@ -31,10 +31,21 @@ namespace VideoGamesStore.Views
             sort = "ASC";
             LoadCategoryIntoComboBox();
             ShowProduct();
-            if (Helper.user == null || Helper.user.UserRole == 2)
+            if (Helper.user == null)
             {
-                editProductButton.Visibility = Visibility.Hidden;
-                addProductButton.Visibility = Visibility.Hidden;
+                editProductButtonAdmin.Visibility = Visibility.Hidden;
+                addProductButtonAdmin.Visibility = Visibility.Hidden;
+                menuAddProductButtonUser.Visibility = Visibility.Hidden;
+                menuAddProductButtonAdmin.Visibility = Visibility.Hidden;
+                deleteProductButton.Visibility = Visibility.Hidden;
+                collectingOrderButton.Visibility = Visibility.Hidden;
+            }
+            if (Helper.user != null && Helper.user.UserRole == 2)
+            {
+                editProductButtonAdmin.Visibility= Visibility.Hidden;
+                deleteProductButton.Visibility = Visibility.Hidden;
+                addProductButtonAdmin.Visibility = Visibility.Hidden;
+                menuAddProductButtonUser.Visibility = Visibility.Hidden;
             }
         }
         public Catalog()
@@ -66,6 +77,10 @@ namespace VideoGamesStore.Views
             countFilter = videoGames.Count();
             countTextBox.Text = + countFilter + " из " + videoGameCount;
             listBoxVideoGames.ItemsSource = videoGames;
+
+        }
+        private void CollectingOrderButton(object sender, RoutedEventArgs e)
+        {
 
         }
         private void TextBoxSearch(object sender, TextChangedEventArgs e)
@@ -100,7 +115,11 @@ namespace VideoGamesStore.Views
             ShowProduct();
 
         }
-        private void AddProductButton(object sender, RoutedEventArgs e)
+        private void AddProductButtonUser(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void AddProductButtonAdmin(object sender, RoutedEventArgs e)
         {
             addWindow = new AddProduct(this);
             Close();
@@ -126,6 +145,8 @@ namespace VideoGamesStore.Views
             }
             catch { MessageBox.Show("Не удалено"); }
         }
+
+        
 
         private void BackToAuth(object sender, RoutedEventArgs e)
         {

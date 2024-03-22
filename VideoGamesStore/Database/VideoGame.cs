@@ -57,5 +57,5 @@ namespace VideoGamesStore.Database
             }   
         }
         
-}
+    }
 }

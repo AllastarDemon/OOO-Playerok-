@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Icon="/Resources/logo.ico"
-        Title="Catalog" Height="450" Width="800">
+        Title="Catalog" Height="500" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
@@ -27,6 +27,12 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <ListBox Name="listBoxVideoGames">
+                <ListBox.ContextMenu>
+                    <ContextMenu Name="menuContext">
+                        <MenuItem Name="menuAddProductButtonUser" Click="AddProductButtonUser" Header="Добавить в корзину"/>
+                        <MenuItem Name="menuAddProductButtonAdmin" Click="AddProductButtonAdmin" Header="Добавить видеоигру"/>
+                    </ContextMenu>
+                </ListBox.ContextMenu>
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
@@ -54,9 +60,10 @@
                 </ComboBox>
                 <TextBlock Text="Сортировать по категориям" Style="{StaticResource TextBlockStyle}"/>
                 <ComboBox Name="categoryComboBox" SelectionChanged="CategoryComboBox"/>
-                <Button Name="editProductButton" Click="EditProductButton" Width="200" Height="50" Content="Редактировать видеоигру" VerticalAlignment="Bottom" FontSize="14" FontFamily="Impact"/>
-                <Button Name="addProductButton" Click="AddProductButton"  Width="200" Height="50" Content="Добавить видеоигру" FontSize="14" FontFamily="Impact"/>
+                <Button Name="editProductButtonAdmin" Click="EditProductButton" Width="200" Height="50" Content="Редактировать видеоигру" VerticalAlignment="Bottom" FontSize="14" FontFamily="Impact"/>
+                <Button Name="addProductButtonAdmin" Click="AddProductButtonAdmin"  Width="200" Height="50" Content="Добавить видеоигру" FontSize="14" FontFamily="Impact"/>
                 <Button Name="deleteProductButton" Click="DeleteProductButton" Width="200" Height="50" Content="Удалить видеоигру" FontSize="14" FontFamily="Impact"/>
+                <Button Name="collectingOrderButton" Click="CollectingOrderButton"  Width="200" Height="50" Content="Оформить заказ" FontSize="14" FontFamily="Impact"/>
             </StackPanel>
             
         </Grid>
