@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "F:\\Programming\\VideoGamesStore\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|f:\\programming\\videogamesstore\\videogamesstore\\views\\addproduct.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|solutionrelative:videogamesstore\\views\\addproduct.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|f:\\programming\\videogamesstore\\videogamesstore\\views\\addproduct.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|solutionrelative:videogamesstore\\views\\addproduct.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|f:\\programming\\videogamesstore\\videogamesstore\\views\\editproduct.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|solutionrelative:videogamesstore\\views\\editproduct.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|f:\\programming\\videogamesstore\\videogamesstore\\views\\catalog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|solutionrelative:videogamesstore\\views\\catalog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|f:\\programming\\videogamesstore\\videogamesstore\\views\\catalog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|solutionrelative:videogamesstore\\views\\catalog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|f:\\programming\\videogamesstore\\videogamesstore\\database\\videogame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|solutionrelative:videogamesstore\\database\\videogame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|f:\\programming\\videogamesstore\\videogamesstore\\views\\editproduct.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|solutionrelative:videogamesstore\\views\\editproduct.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,44 +30,69 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "VideoGame.cs",
-              "DocumentMoniker": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Database\\VideoGame.cs",
-              "RelativeDocumentMoniker": "VideoGamesStore\\Database\\VideoGame.cs",
-              "ToolTip": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Database\\VideoGame.cs",
-              "RelativeToolTip": "VideoGamesStore\\Database\\VideoGame.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC0AAAAIAAAA",
+              "DocumentIndex": 0,
+              "Title": "AddProduct.xaml.cs",
+              "DocumentMoniker": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Views\\AddProduct.xaml.cs",
+              "RelativeDocumentMoniker": "VideoGamesStore\\Views\\AddProduct.xaml.cs",
+              "ToolTip": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Views\\AddProduct.xaml.cs",
+              "RelativeToolTip": "VideoGamesStore\\Views\\AddProduct.xaml.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAA1wBAAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T16:24:49.304Z",
+              "WhenOpened": "2024-03-22T19:06:08.039Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Catalog.xaml",
-              "DocumentMoniker": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Views\\Catalog.xaml",
-              "RelativeDocumentMoniker": "VideoGamesStore\\Views\\Catalog.xaml",
-              "ToolTip": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Views\\Catalog.xaml",
-              "RelativeToolTip": "VideoGamesStore\\Views\\Catalog.xaml",
+              "Title": "AddProduct.xaml",
+              "DocumentMoniker": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Views\\AddProduct.xaml",
+              "RelativeDocumentMoniker": "VideoGamesStore\\Views\\AddProduct.xaml",
+              "ToolTip": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Views\\AddProduct.xaml",
+              "RelativeToolTip": "VideoGamesStore\\Views\\AddProduct.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-22T16:16:59.739Z",
+              "WhenOpened": "2024-03-22T19:06:08.644Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Catalog.xaml.cs",
               "DocumentMoniker": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Views\\Catalog.xaml.cs",
               "RelativeDocumentMoniker": "VideoGamesStore\\Views\\Catalog.xaml.cs",
               "ToolTip": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Views\\Catalog.xaml.cs",
               "RelativeToolTip": "VideoGamesStore\\Views\\Catalog.xaml.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAwwC8AAABIAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIoAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T16:16:58.922Z",
+              "WhenOpened": "2024-03-22T18:12:18.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EditProduct.xaml",
+              "DocumentMoniker": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Views\\EditProduct.xaml",
+              "RelativeDocumentMoniker": "VideoGamesStore\\Views\\EditProduct.xaml",
+              "ToolTip": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Views\\EditProduct.xaml",
+              "RelativeToolTip": "VideoGamesStore\\Views\\EditProduct.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-22T17:25:05.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EditProduct.xaml.cs",
+              "DocumentMoniker": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Views\\EditProduct.xaml.cs",
+              "RelativeDocumentMoniker": "VideoGamesStore\\Views\\EditProduct.xaml.cs",
+              "ToolTip": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Views\\EditProduct.xaml.cs",
+              "RelativeToolTip": "VideoGamesStore\\Views\\EditProduct.xaml.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAmwCAAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T17:30:45.492Z",
               "EditorCaption": ""
             }
           ]

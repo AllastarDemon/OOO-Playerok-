@@ -125,12 +125,18 @@ namespace VideoGamesStore.Views
             Close();
             addWindow.Show();
         }
-
         private void EditProductButton(object sender, RoutedEventArgs e)
         {
-            editWindow = new EditProduct(this);
-            Close();
-            editWindow.Show();
+            
+            VideoGame selectedVideoGame = listBoxVideoGames.SelectedItem as VideoGame;
+            if (selectedVideoGame != null)
+            {
+                editWindow = new EditProduct(this, selectedVideoGame);
+                Close();
+                editWindow.Show();
+            }
+            else
+                MessageBox.Show("Выберите сначала игру! АРА-АРА");
         }
 
         private void DeleteProductButton(object sender, RoutedEventArgs e)

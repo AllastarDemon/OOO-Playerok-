@@ -227,6 +227,7 @@
       <DependentUpon>PlayerokModel.edmx</DependentUpon>
       <LastGenOutput>PlayerokModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\upload.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

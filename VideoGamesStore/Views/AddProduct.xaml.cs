@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Controls;
 using VideoGamesStore.Classes;
 using VideoGamesStore.Database;
+using System;
 
 namespace VideoGamesStore.Views
 {
@@ -14,31 +15,32 @@ namespace VideoGamesStore.Views
         {
             InitializeComponent();
             formCatalog = catalog;
-            LoadDevelopersIntoComboBox();
-            LoadCategoryIntoComboBox();
-        }
 
-        private void LoadDevelopersIntoComboBox()
+            developerComboBox.ItemsSource = Helper.DB.Developer.ToList();
+            developerComboBox.DisplayMemberPath = "DeveloperName";
+            developerComboBox.SelectedValuePath = "DeveloperID";
+
+            categoryComboBox.ItemsSource = Helper.DB.Category.ToList();
+            categoryComboBox.DisplayMemberPath = "CategoryName";
+            categoryComboBox.SelectedValuePath = "CategoryID";
+        }
+        private void SaveEditForm(object sender, RoutedEventArgs e)
         {
-            // Загрузка данных из базы данных
-            List<Developer> developers = Helper.DB.Developer.ToList();
 
-            // Связывание данных с комбобоксом
-            DeveloperComboBox.ItemsSource = developers;
-            DeveloperComboBox.DisplayMemberPath = "DeveloperName"; // Устанавливаем свойство для отображения имени разработчика
-            DeveloperComboBox.SelectedValuePath = "DeveloperID";
+            VideoGame addVideoGame = new VideoGame();
+            addVideoGame.VideoGameName = TitleTextBox.Text;
+            addVideoGame.VideoGamePrice = Convert.ToDouble(PriceTextBox.Text);
+            addVideoGame.VideoGameDiscount = Convert.ToDouble(DiscountTextBox.Text);
+            addVideoGame.VideoGameDescription = DescriptionTextBox.Text;
+            addVideoGame.VideoGameDeveloper = (developerComboBox.SelectedItem as Developer).DeveloperID;
+            addVideoGame.VideoGameCategory = (categoryComboBox.SelectedItem as Category).CategoryID;
+            try
+            {
+                Helper.DB.SaveChanges();
+                MessageBox.Show("Получилось");
+            }
+            catch (Exception ex) { MessageBox.Show("Не получилось"); }
         }
-        private void LoadCategoryIntoComboBox()
-        {
-            // Загрузка данных из базы данных
-            List<Category> categories = Helper.DB.Category.ToList();
-
-            // Связывание данных с комбобоксом
-            CategoryComboBox.ItemsSource = categories;
-            CategoryComboBox.DisplayMemberPath = "CategoryName"; // Устанавливаем свойство для отображения имени разработчика
-            CategoryComboBox.SelectedValuePath = "CategoryID";
-        }
-
         private void LoadDevelopersIntoComboBox(object sender, SelectionChangedEventArgs e)
         {
             // Ваша логика обработки события SelectionChanged
