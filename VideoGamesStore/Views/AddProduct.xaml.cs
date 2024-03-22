@@ -1,4 +1,10 @@
 ﻿using System.Windows;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Windows.Controls;
+using VideoGamesStore.Classes;
+using VideoGamesStore.Database;
 
 namespace VideoGamesStore.Views
 {
@@ -9,6 +15,40 @@ namespace VideoGamesStore.Views
         {
             InitializeComponent();
             formCatalog = catalog;
+            LoadDevelopersIntoComboBox();
+            LoadCategoryIntoComboBox();
+        }
+
+        private void LoadDevelopersIntoComboBox()
+        {
+            // Загрузка данных из базы данных
+            var developers = Helper.DB.Developer.ToList();
+
+            // Связывание данных с комбобоксом
+            DeveloperComboBox.ItemsSource = developers;
+            DeveloperComboBox.DisplayMemberPath = "DeveloperName"; // Устанавливаем свойство для отображения имени разработчика
+            DeveloperComboBox.SelectedValuePath = "DeveloperID";
+        }
+        private void LoadCategoryIntoComboBox()
+        {
+            // Загрузка данных из базы данных
+            var categoryes = Helper.DB.Category.ToList();
+
+            // Связывание данных с комбобоксом
+            CategoryComboBox.ItemsSource = categoryes;
+            CategoryComboBox.DisplayMemberPath = "CategoryName"; // Устанавливаем свойство для отображения имени разработчика
+            CategoryComboBox.SelectedValuePath = "CategoryID";
+        }
+
+        private void LoadDevelopersIntoComboBox(object sender, SelectionChangedEventArgs e)
+        {
+            // Ваша логика обработки события SelectionChanged
+            // Этот метод остается нетронутым и используется для обработки события SelectionChanged комбо бокса
+        }
+        private void LoadCategoryIntoComboBox(object sender, SelectionChangedEventArgs e)
+        {
+            // Ваша логика обработки события SelectionChanged
+            // Этот метод остается нетронутым и используется для обработки события SelectionChanged комбо бокса
         }
         private void BackToCatalog(object sender, RoutedEventArgs e)
         {
@@ -21,9 +61,5 @@ namespace VideoGamesStore.Views
             Close();
         }
 
-        private void AddProductButton(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

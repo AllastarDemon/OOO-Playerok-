@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "F:\\Programming\\VideoGamesStore\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|f:\\programming\\videogamesstore\\videogamesstore\\views\\addproduct.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|solutionrelative:videogamesstore\\views\\addproduct.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|f:\\programming\\videogamesstore\\videogamesstore\\views\\addproduct.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|solutionrelative:videogamesstore\\views\\addproduct.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|f:\\programming\\videogamesstore\\videogamesstore\\classes\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|solutionrelative:videogamesstore\\classes\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,11 +22,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Helper.cs",
+              "DocumentMoniker": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Classes\\Helper.cs",
+              "RelativeDocumentMoniker": "VideoGamesStore\\Classes\\Helper.cs",
+              "ToolTip": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Classes\\Helper.cs",
+              "RelativeToolTip": "VideoGamesStore\\Classes\\Helper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T10:20:12.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AddProduct.xaml.cs",
+              "DocumentMoniker": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Views\\AddProduct.xaml.cs",
+              "RelativeDocumentMoniker": "VideoGamesStore\\Views\\AddProduct.xaml.cs",
+              "ToolTip": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Views\\AddProduct.xaml.cs",
+              "RelativeToolTip": "VideoGamesStore\\Views\\AddProduct.xaml.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAswB0AAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T10:12:19.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "AddProduct.xaml",
               "DocumentMoniker": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Views\\AddProduct.xaml",
               "RelativeDocumentMoniker": "VideoGamesStore\\Views\\AddProduct.xaml",
