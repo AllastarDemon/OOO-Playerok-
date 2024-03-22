@@ -50,7 +50,7 @@
                 <TextBox Grid.Row="5" Name="DescriptionTextBox" Background="Gray" Height="70" Width="250" Margin="145, 0, 0, 0"/>
             </Grid>
             <Image Name="editProductImage" Grid.Column="2" Width="160" Height="160" Stretch="Fill"/>
-            <Button Content="Выбрать изображение" Name="OpenDialogButton" Click="ButtonOpenDialog" Width="170" Height="70" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,15,0,0"/>
+            <Button Content="Выбрать изображение" Name="OpenDialogButton" Width="170" Height="70" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,15,0,0"/>
             <Button Content="Сохранить" Name="saveEditForm" Click="SaveEditForm" Grid.Column="2" Width="170" Height="70" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,15"/>
         </Grid>
     </Grid>

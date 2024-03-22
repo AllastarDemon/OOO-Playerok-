@@ -17,6 +17,7 @@ namespace VideoGamesStore.Views
         private Authorization auth;
         public AddProduct addWindow;
         public EditProduct editWindow;
+        public Basket basketWindow;
         List<VideoGame> videoGames;
         int videoGameCount = 0;
         double[,] arrayDiscount = new double[,] { { 0, 100 }, { 10, 30 }, { 35, 40 }, { 45, 60 }, { 60, 100 } };
@@ -81,7 +82,9 @@ namespace VideoGamesStore.Views
         }
         private void CollectingOrderButton(object sender, RoutedEventArgs e)
         {
-
+            basketWindow = new Basket(this);
+            Close();
+            basketWindow.Show();
         }
         private void TextBoxSearch(object sender, TextChangedEventArgs e)
         {
@@ -138,7 +141,6 @@ namespace VideoGamesStore.Views
             else
                 MessageBox.Show("Выберите сначала игру! АРА-АРА");
         }
-
         private void DeleteProductButton(object sender, RoutedEventArgs e)
         {
             VideoGame videogame = listBoxVideoGames.SelectedItem as VideoGame; // Получение данных о игре для последующего удаления
@@ -151,9 +153,6 @@ namespace VideoGamesStore.Views
             }
             catch { MessageBox.Show("Не удалено"); }
         }
-
-        
-
         private void BackToAuth(object sender, RoutedEventArgs e)
         {
             // проверка на открытия окна авторизации для избежания System.OperationException

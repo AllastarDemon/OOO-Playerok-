@@ -26,7 +26,6 @@ namespace VideoGamesStore.Views
         }
         private void SaveEditForm(object sender, RoutedEventArgs e)
         {
-
             VideoGame addVideoGame = new VideoGame();
             addVideoGame.VideoGameName = TitleTextBox.Text;
             addVideoGame.VideoGamePrice = Convert.ToDouble(PriceTextBox.Text);
@@ -34,6 +33,7 @@ namespace VideoGamesStore.Views
             addVideoGame.VideoGameDescription = DescriptionTextBox.Text;
             addVideoGame.VideoGameDeveloper = (developerComboBox.SelectedItem as Developer).DeveloperID;
             addVideoGame.VideoGameCategory = (categoryComboBox.SelectedItem as Category).CategoryID;
+            Helper.DB.VideoGame.Add(addVideoGame);
             try
             {
                 Helper.DB.SaveChanges();

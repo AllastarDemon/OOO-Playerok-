@@ -29,7 +29,7 @@
             <ListBox Name="listBoxVideoGames">
                 <ListBox.ContextMenu>
                     <ContextMenu Name="menuContext">
-                        <MenuItem Name="menuAddProductButtonUser" Click="AddProductButtonUser" Header="Добавить в корзину"/>
+                        <MenuItem Name="menuAddProductButtonUser" Click="AddProductButtonUser" Header="Выбрать игру"/>
                         <MenuItem Name="menuAddProductButtonAdmin" Click="AddProductButtonAdmin" Header="Добавить видеоигру"/>
                     </ContextMenu>
                 </ListBox.ContextMenu>
