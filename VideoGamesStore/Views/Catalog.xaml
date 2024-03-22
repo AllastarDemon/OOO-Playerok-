@@ -34,11 +34,11 @@
                     
                 </ComboBox>
                 <TextBlock Text="Сортировать по категориям" Style="{StaticResource TextBlockStyle}"/>
-                <ComboBox>
+                <ComboBox Name="categoryComboBox" SelectionChanged="LoadCategoryIntoComboBox">
 
                 </ComboBox>
-                <Button Name="editProductButton" Click="EditProductButton" Width="200" Height="70" Content="Редактировать видеоигру" VerticalAlignment="Bottom"/>
-                <Button Name="addProductButton" Click="AddProductButton"  Width="200" Height="70" Content="Добавить видеоигру"/>
+                <Button Name="editProductButton" Click="EditProductButton" Width="200" Height="70" Content="Редактировать видеоигру" VerticalAlignment="Bottom" FontSize="14" FontFamily="Impact"/>
+                <Button Name="addProductButton" Click="AddProductButton"  Width="200" Height="70" Content="Добавить видеоигру" FontSize="14" FontFamily="Impact"/>
             </StackPanel>
             
         </Grid>

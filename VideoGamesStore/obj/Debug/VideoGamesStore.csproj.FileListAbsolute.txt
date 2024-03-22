@@ -28,3 +28,4 @@ F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\Views\EditProduct.g.cs
 F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\Views\AddProduct.baml
 F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\Views\Basket.baml
 F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\Views\EditProduct.baml
+F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\App.baml

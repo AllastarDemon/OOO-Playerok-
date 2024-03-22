@@ -6,5 +6,6 @@
         public static Database.User user { get; set; }
         public static Database.Developer developer { get; set; }
         public static Database.Category category { get; set; }
+        public static Database.VideoGame videogames { get; set; }
     }
 }

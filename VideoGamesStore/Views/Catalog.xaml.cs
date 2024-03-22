@@ -1,4 +1,9 @@
-﻿using System.Windows;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Windows;
+using System.Windows.Controls;
+using VideoGamesStore.Classes;
+using VideoGamesStore.Database;
 
 namespace VideoGamesStore.Views
 {
@@ -14,10 +19,26 @@ namespace VideoGamesStore.Views
         {
             InitializeComponent();
             auth = authorization;
+            LoadCategoryIntoComboBox();
         }
         public Catalog()
         {
             InitializeComponent();
+        }
+        private void LoadCategoryIntoComboBox()
+        {
+            // Загрузка данных из базы данных
+            List<Category> categories = Helper.DB.Category.ToList();
+            categories.Insert(0, new Category { CategoryName = "Все категории" });
+            // Связывание данных с комбобоксом
+            categoryComboBox.ItemsSource = categories;
+            categoryComboBox.DisplayMemberPath = "CategoryName"; // Устанавливаем свойство для отображения имени разработчика
+            categoryComboBox.SelectedValuePath = "CategoryID";
+        }
+        private void LoadCategoryIntoComboBox(object sender, SelectionChangedEventArgs e)
+        {
+            // Ваша логика обработки события SelectionChanged
+            // Этот метод остается нетронутым и используется для обработки события SelectionChanged комбо бокса
         }
         private void BackToAuth(object sender, RoutedEventArgs e)
         {
