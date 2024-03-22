@@ -1,16 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace VideoGamesStore.Views
 {
@@ -19,9 +7,21 @@ namespace VideoGamesStore.Views
     /// </summary>
     public partial class Basket : Window
     {
-        public Basket()
+        private Catalog formCatalog;
+        public Basket(Catalog catalog)
         {
             InitializeComponent();
+            formCatalog = catalog;
+        }
+        private void BackToCatalog(object sender, RoutedEventArgs e)
+        {
+            // проверка на открытия окна авторизации для избежания System.OperationException
+            if (formCatalog == null || !formCatalog.IsVisible)
+            {
+                formCatalog = new Catalog();
+            }
+            formCatalog.Show();
+            Close();
         }
     }
 }

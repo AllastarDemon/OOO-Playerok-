@@ -5,7 +5,6 @@ F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\VideoGamesStore.csproj.
 F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\Authorization.g.cs
 F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\App.g.cs
 F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\VideoGamesStore_MarkupCompile.cache
-F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\VideoGamesStore_MarkupCompile.lref
 F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\Authorization.baml
 F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\VideoGamesStore.g.resources
 F:\Programming\VideoGamesStore\VideoGamesStore\obj\Debug\VideoGamesStore.Properties.Resources.resources
