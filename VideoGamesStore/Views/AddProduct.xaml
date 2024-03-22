@@ -27,16 +27,28 @@
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <TextBlock Text="Название: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,65,0,0" FontSize="24" FontFamily="Impact"/>
-            <TextBox Name="TitleTextBox" Background="Gray" Width="140" Margin="180,67,80,249"/>
-            <TextBlock Text="Разработчик: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,95,0,0" FontSize="24" FontFamily="Impact"/>
-            <TextBlock Text="Жанр: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,125,0,0" FontSize="24" FontFamily="Impact"/>
-            <TextBlock Text="Стоимость: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,155,0,0" FontSize="24" FontFamily="Impact"/>
-            <TextBox Name="PriceTextBox" Background="Gray" Width="140" Margin="180,159,80,125"/>
-            <TextBlock Text="Скидка: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,185,0,0" FontSize="24" FontFamily="Impact"/>
-            <TextBox Name="DiscountTextBox" Background="Gray" Width="140" Margin="180,190,80, 125"/>
-            <TextBlock Text="Описание: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,215,0,0" FontSize="24" FontFamily="Impact"/>
-            <TextBox Name="DescriptionTextBox" Background="Gray" Margin="19,254,31,17"/>
+            <Grid Grid.Column="0" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Название: " HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24" FontFamily="Impact"/>
+                <TextBox Name="TitleTextBox" Background="Gray" Width="140" Height="40" Margin="35, 0, 0, 0"/>
+                <TextBlock Grid.Row="1" Text="Разработчик: " HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24" FontFamily="Impact"/>
+                <ComboBox Grid.Row="1" Width="140" Height="40" Background="Gray" Margin="35, 0, 0, 0"/>
+                <TextBlock Grid.Row="2" Text="Жанр: " HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24" FontFamily="Impact"/>
+                <ComboBox Grid.Row="2" Width="140" Height="40" Background="Gray" Margin="35, 0, 0, 0"/>
+                <TextBlock Grid.Row="3" Text="Стоимость: " HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24" FontFamily="Impact"/>
+                <TextBox Grid.Row="3" Name="PriceTextBox" Background="Gray" Width="140" Height="40" Margin="35, 0, 0, 0"/>
+                <TextBlock Grid.Row="4" Text="Скидка: " HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24" FontFamily="Impact"/>
+                <TextBox Grid.Row="4" Name="DiscountTextBox" Background="Gray" Width="140" Height="40" Margin="35, 0, 0, 0"/>
+                <TextBlock Grid.Row="5" Text="Описание: " HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24" FontFamily="Impact"/>
+                <TextBox Grid.Row="5" Name="DescriptionTextBox" Background="Gray" Height="70" Width="250" Margin="145, 0, 0, 0"/>
+            </Grid>
         </Grid>
     </Grid>
 </Window>
