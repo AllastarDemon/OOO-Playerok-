@@ -44,9 +44,14 @@ namespace VideoGamesStore.Views
             }
             if (Helper.user != null && Helper.user.UserRole == 2)
             {
-                editProductButtonAdmin.Visibility= Visibility.Hidden;
+                editProductButtonAdmin.Visibility = Visibility.Hidden;
                 deleteProductButton.Visibility = Visibility.Hidden;
                 addProductButtonAdmin.Visibility = Visibility.Hidden;
+                menuAddProductButtonUser.Visibility = Visibility.Hidden;
+            }
+            if (Helper.user != null && Helper.user.UserRole == 1)
+            {
+                collectingOrderButton.Visibility = Visibility.Hidden;
                 menuAddProductButtonUser.Visibility = Visibility.Hidden;
             }
         }

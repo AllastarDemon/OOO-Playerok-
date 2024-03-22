@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "F:\\Programming\\VideoGamesStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|f:\\programming\\videogamesstore\\videogamesstore\\views\\basket.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|solutionrelative:videogamesstore\\views\\basket.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|F:\\Programming\\VideoGamesStore\\videogamesstore\\views\\basket.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|solutionrelative:videogamesstore\\views\\basket.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|f:\\programming\\videogamesstore\\videogamesstore\\views\\catalog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|solutionrelative:videogamesstore\\views\\catalog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|F:\\Programming\\VideoGamesStore\\videogamesstore\\views\\catalog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|solutionrelative:videogamesstore\\views\\catalog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|f:\\programming\\videogamesstore\\videogamesstore\\authorization.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|solutionrelative:videogamesstore\\authorization.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|f:\\programming\\videogamesstore\\videogamesstore\\views\\basket.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|solutionrelative:videogamesstore\\views\\basket.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|f:\\programming\\videogamesstore\\videogamesstore\\views\\basket.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E809246C-FE1E-4C66-B8D7-553633176383}|VideoGamesStore\\VideoGamesStore.csproj|solutionrelative:videogamesstore\\views\\basket.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,37 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Catalog.xaml.cs",
-              "DocumentMoniker": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Views\\Catalog.xaml.cs",
-              "RelativeDocumentMoniker": "VideoGamesStore\\Views\\Catalog.xaml.cs",
-              "ToolTip": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Views\\Catalog.xaml.cs",
-              "RelativeToolTip": "VideoGamesStore\\Views\\Catalog.xaml.cs",
-              "ViewState": "AQIAAGcAAAAAAAAAAAAawHwAAABDAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T20:05:32.077Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Basket.xaml.cs",
-              "DocumentMoniker": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Views\\Basket.xaml.cs",
-              "RelativeDocumentMoniker": "VideoGamesStore\\Views\\Basket.xaml.cs",
-              "ToolTip": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Views\\Basket.xaml.cs",
-              "RelativeToolTip": "VideoGamesStore\\Views\\Basket.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABNAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T19:34:45.612Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Catalog.xaml",
               "DocumentMoniker": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Views\\Catalog.xaml",
               "RelativeDocumentMoniker": "VideoGamesStore\\Views\\Catalog.xaml",
@@ -64,11 +42,50 @@
               "RelativeToolTip": "VideoGamesStore\\Views\\Catalog.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-03-22T19:20:44.904Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Authorization.xaml",
+              "DocumentMoniker": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Authorization.xaml",
+              "RelativeDocumentMoniker": "VideoGamesStore\\Authorization.xaml",
+              "ToolTip": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Authorization.xaml",
+              "RelativeToolTip": "VideoGamesStore\\Authorization.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-22T21:05:59.9Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Catalog.xaml.cs",
+              "DocumentMoniker": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Views\\Catalog.xaml.cs",
+              "RelativeDocumentMoniker": "VideoGamesStore\\Views\\Catalog.xaml.cs",
+              "ToolTip": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Views\\Catalog.xaml.cs",
+              "RelativeToolTip": "VideoGamesStore\\Views\\Catalog.xaml.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAQwCQAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T21:05:45.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Basket.xaml.cs",
+              "DocumentMoniker": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Views\\Basket.xaml.cs",
+              "RelativeDocumentMoniker": "VideoGamesStore\\Views\\Basket.xaml.cs",
+              "ToolTip": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Views\\Basket.xaml.cs",
+              "RelativeToolTip": "VideoGamesStore\\Views\\Basket.xaml.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAwwD4AAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T20:31:24.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Basket.xaml",
               "DocumentMoniker": "F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Views\\Basket.xaml",
               "RelativeDocumentMoniker": "VideoGamesStore\\Views\\Basket.xaml",

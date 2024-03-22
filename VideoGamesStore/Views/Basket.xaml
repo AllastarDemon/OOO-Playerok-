@@ -27,19 +27,26 @@
                 <ColumnDefinition Width="2.5*"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <ListBox>
+            <ListBox Name="listBoxBasket">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>
-                            
+                            <Image Source="{Binding Path=VideoGameImagePath}" Width="120" Height="120" Stretch="Uniform"/>
+                            <StackPanel>
+                                <TextBlock Text="{Binding Path=VideoGameName, StringFormat=Название: {0}}" Margin="0,0,0,0" FontSize="16" FontFamily="Impact"/>
+                                <TextBlock Text="{Binding Path=VideoGamePrice, StringFormat=Цена: {0} руб.}" Margin="0,0,0,0" FontSize="16" FontFamily="Impact" TextDecorations="Strikethrough"/>
+                                <TextBlock Text="{Binding Path=VideoGameCostWithDiscount, StringFormat=Цена со скидкой: {0} руб.}" Margin="0,0,0,0" FontSize="16" FontFamily="Impact"/>
+                                <Button Click="DeleteButtonBasket" Content="Удалить" Margin="45,0,0,0" FontSize="16" FontFamily="Impact"/>
+                            </StackPanel>
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
             <StackPanel Grid.Column="1">
                 <TextBlock Text="Информация о заказе" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource TextBlockStyle}"/>
-                <TextBlock Name="textBoxSum" Text="Итоговая сумма заказа:" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="15" FontFamily="Impact"/>
+                <TextBlock Name="textBoxSum" Text="Итоговая сумма заказа: " VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="15" FontFamily="Impact"/>
                 <TextBlock Name="textBoxCodeOfOrder" Text="Код заказа:" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="15" FontFamily="Impact"/>
+                <Button Name="buttonOrder"  Click="ButtonOrder" HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="Оформить заказ" FontSize="18" FontFamily="Impact" Margin="0,245,0,0"/>
             </StackPanel>
         </Grid>
     </Grid>
