@@ -19,6 +19,7 @@ namespace VideoGamesStore.Views
         public EditProduct editWindow;
         public Basket basketWindow;
         List<VideoGame> videoGames;
+        List<VideoGame> videoGamesInOrder = new List<VideoGame>();
         int videoGameCount = 0;
         double[,] arrayDiscount = new double[,] { { 0, 100 }, { 10, 30 }, { 35, 40 }, { 45, 60 }, { 60, 100 } };
         int filterDiscount, filterCategory;     //Фильтр по скидке и категории
@@ -82,7 +83,7 @@ namespace VideoGamesStore.Views
         }
         private void CollectingOrderButton(object sender, RoutedEventArgs e)
         {
-            basketWindow = new Basket(this);
+            basketWindow = new Basket(this, videoGamesInOrder);
             Close();
             basketWindow.Show();
         }
@@ -120,7 +121,16 @@ namespace VideoGamesStore.Views
         }
         private void AddProductButtonUser(object sender, RoutedEventArgs e)
         {
-
+            MenuItem menuItem = (MenuItem)sender;
+            ContextMenu contextMenu = (ContextMenu)menuItem.Parent;
+            ListBox listBox = (ListBox)contextMenu.PlacementTarget;
+            VideoGame selectedVideoGame = (VideoGame)listBox.SelectedItem;
+            if (videoGamesInOrder.Find(p => p.VideoGameID == selectedVideoGame.VideoGameID ) != null)
+            {
+                MessageBox.Show("Данная игра уже добавлена");
+                return;
+            }
+            videoGamesInOrder.Add(selectedVideoGame);
         }
         private void AddProductButtonAdmin(object sender, RoutedEventArgs e)
         {

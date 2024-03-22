@@ -38,7 +38,8 @@
             </ListBox>
             <StackPanel Grid.Column="1">
                 <TextBlock Text="Информация о заказе" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource TextBlockStyle}"/>
-                <TextBlock Text="Итоговая сумма заказа:" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="15" FontFamily="Impact"/>
+                <TextBlock Name="textBoxSum" Text="Итоговая сумма заказа:" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="15" FontFamily="Impact"/>
+                <TextBlock Name="textBoxCodeOfOrder" Text="Код заказа:" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="15" FontFamily="Impact"/>
             </StackPanel>
         </Grid>
     </Grid>
