@@ -11,7 +11,8 @@ namespace VideoGamesStore.Database
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.IO;
+
     public partial class VideoGame
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -27,10 +28,32 @@ namespace VideoGamesStore.Database
         public double VideoGameDiscount { get; set; }
         public int VideoGameDeveloper { get; set; }
         public string VideoGameDescription { get; set; }
+        public string VideoGameImage { get; set; }
     
         public virtual Category Category { get; set; }
         public virtual Developer Developer { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Request> Request { get; set; }
-    }
+        public double VideoGameCostWithDiscount
+        {
+            get
+            {
+                return VideoGamePrice - (VideoGamePrice * (VideoGameDiscount / 100));
+            }
+        }
+        
+        public string VideoGameImagePath
+        {
+            get
+            {
+                string path = Environment.CurrentDirectory + @"\..\..\Resources" + VideoGameImage + ".png";
+
+                if (File.Exists(path))
+                    return path;
+                else
+                    return Environment.CurrentDirectory + @"\..\..\Resources\smileFace.png";
+            }   
+        }
+        
+}
 }

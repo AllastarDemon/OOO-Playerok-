@@ -82,6 +82,7 @@
           <Property Name="VideoGameDiscount" Type="float" Nullable="false" />
           <Property Name="VideoGameDeveloper" Type="int" Nullable="false" />
           <Property Name="VideoGameDescription" Type="nvarchar" MaxLength="50" />
+          <Property Name="VideoGameImage" Type="nvarchar" MaxLength="250" />
         </EntityType>
         <Association Name="FK_Client_User">
           <End Role="User" Type="Self.User" Multiplicity="1" />
@@ -307,6 +308,7 @@
           <Property Name="VideoGameDiscount" Type="Double" Nullable="false" />
           <Property Name="VideoGameDeveloper" Type="Int32" Nullable="false" />
           <Property Name="VideoGameDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VideoGameImage" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Category" Relationship="Self.FK_VideoGame_Category" FromRole="VideoGame" ToRole="Category" />
           <NavigationProperty Name="Developer" Relationship="Self.FK_VideoGame_Developer" FromRole="VideoGame" ToRole="Developer" />
           <NavigationProperty Name="Request" Relationship="Self.RequestGame" FromRole="VideoGame" ToRole="Request" />
@@ -506,6 +508,7 @@
                 <ScalarProperty Name="VideoGameDiscount" ColumnName="VideoGameDiscount" />
                 <ScalarProperty Name="VideoGameDeveloper" ColumnName="VideoGameDeveloper" />
                 <ScalarProperty Name="VideoGameDescription" ColumnName="VideoGameDescription" />
+                <ScalarProperty Name="VideoGameImage" ColumnName="VideoGameImage" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

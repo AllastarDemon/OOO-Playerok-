@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -13,18 +14,25 @@ namespace VideoGamesStore.Views
     public partial class Catalog : Window
     {
         private Authorization auth;
+        private string sort = string.Empty;
         public AddProduct addWindow;
         public EditProduct editWindow;
         public Catalog(Authorization authorization)
         {
             InitializeComponent();
             auth = authorization;
+            sort = "ASC";
             LoadCategoryIntoComboBox();
         }
         public Catalog()
         {
             InitializeComponent();
         }
+        private void ShowProduct()
+        {
+            
+        }
+
         private void LoadCategoryIntoComboBox()
         {
             // Загрузка данных из базы данных
@@ -40,15 +48,12 @@ namespace VideoGamesStore.Views
             // Ваша логика обработки события SelectionChanged
             // Этот метод остается нетронутым и используется для обработки события SelectionChanged комбо бокса
         }
-        private void BackToAuth(object sender, RoutedEventArgs e)
+        private void PriceComboBox(object sender, SelectionChangedEventArgs e)
         {
-            // проверка на открытия окна авторизации для избежания System.OperationException
-            if (auth == null || !auth.IsVisible)
-            {
-                auth = new Authorization();
-            }
-            auth.Show();
-            Close();
+            if (priceComboBox.SelectedIndex == 0) sort = "ASC";
+            else sort = "DESC";
+            ShowProduct();
+
         }
         private void AddProductButton(object sender, RoutedEventArgs e)
         {
@@ -62,6 +67,16 @@ namespace VideoGamesStore.Views
             editWindow = new EditProduct(this);
             Close();
             editWindow.Show();
+        }
+        private void BackToAuth(object sender, RoutedEventArgs e)
+        {
+            // проверка на открытия окна авторизации для избежания System.OperationException
+            if (auth == null || !auth.IsVisible)
+            {
+                auth = new Authorization();
+            }
+            auth.Show();
+            Close();
         }
     }
 }

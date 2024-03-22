@@ -27,10 +27,27 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <ListBox>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="{Binding Path=VideoGameImagePath}" Width="160" Height="160" Stretch="Uniform"/>
+                            <StackPanel>
+                                <TextBlock Text="{Binding Path=VideoGameDescription}" />
+                                <TextBlock Text="{Binding Path=VideoGameName}" />
+                                <TextBlock Text="{Binding Path=VideoGameCategory}" />
+                                <TextBlock Text="{Binding Path=VideoGameDeveloper}" />
+                                <TextBlock Text="{Binding Path=VideoGamePrice}" />
+                                <TextBlock Text="{Binding Path=VideoGameDiscount}" />
+                                <TextBlock Text="{Binding Path=VideoGameCostWithDiscount}" />
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
             </ListBox>
             <StackPanel Grid.Column="1">
+                <TextBox Background="black" Foreground="White" FontSize="24" FontFamily="Impact"/>
                 <TextBlock Text="Сортировать по стоимости" Style="{StaticResource TextBlockStyle}"/>
-                <ComboBox>
+                <ComboBox Name="priceComboBox" SelectionChanged="PriceComboBox">
                     
                 </ComboBox>
                 <TextBlock Text="Сортировать по категориям" Style="{StaticResource TextBlockStyle}"/>
