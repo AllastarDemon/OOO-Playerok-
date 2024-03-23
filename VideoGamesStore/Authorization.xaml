@@ -29,7 +29,9 @@
         <TextBox Name="LoginTextBox" Foreground="white" FontSize="24" Background="Black" Grid.Column="1" Grid.Row="1" Width="140" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="83,0,0,0" Grid.ColumnSpan="2"/>
         <PasswordBox Name="PasswordTextBox" PasswordChar="*" Foreground="white" FontSize="24" Background="Black" Grid.Column="1" Grid.Row="2" Width="140" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="83,0,0,0" Grid.ColumnSpan="2"/>
         <TextBox Name="captchaTextBox" Background="Black" Foreground="white" FontSize="24" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" Width="140" Height="40"/>
-        <Button Content="↻" Click="RegenerateCaptcha"  Background="#171d25" Foreground="White" FontSize="24" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="1" Margin="0,0,105,0" Width="35" Height="30"/>
+        <TextBox Name="TempTextBox" Foreground="white" FontSize="24" Background="Black" Grid.Column="1" Grid.Row="2" Width="140" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="83,0,0,0" Grid.ColumnSpan="2"/>
+        <Button Content="↻" Click="RegenerateCaptcha"  Background="#171d25" Foreground="White" FontSize="24" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="1" Margin="0,0,105,0" Width="45" Height="45"/>
+        <Button Content="👁" Name="showPassword" Click="TogglePasswordVisibility"  Background="#171d25" Foreground="White" FontSize="24" Grid.Column="2" Grid.Row="2" Margin="0,0,0,0" Width="45" Height="45"/>
         <Button Name="openCatalog" Click="OpenCatalog" Background="black" Foreground="white" Content="Войти" FontSize="14" FontFamily="Impact" Grid.Column="0" Grid.Row="4" Width="110" Height="45" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="106,0,0,0"/>
         <Button Name="openCatalogHowGuest" Click="OpenCatalogHowGuest" Background="black" Foreground="white" Content="Войти как гость" FontSize="14" FontFamily="Impact" Grid.Column="1" Grid.Row="4" Width="110" Height="45" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="113,0,0,0"/>
     </Grid>

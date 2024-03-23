@@ -4,6 +4,7 @@ using VideoGamesStore.Classes;
 using VideoGamesStore.Views;
 using EasyCaptcha.Wpf;
 using System;
+using System.Windows.Controls;
 
 namespace VideoGamesStore
 {
@@ -11,6 +12,8 @@ namespace VideoGamesStore
     {
         Catalog shop;
         String captchaText;
+        private bool isPasswordVisible = false;
+        private string originalPassword = "";
         public Authorization()
         {
             InitializeComponent();
@@ -18,6 +21,27 @@ namespace VideoGamesStore
             const int lengthCaptcha = 4; 
             captcha.CreateCaptcha(Captcha.LetterOption.Alphanumeric, lengthCaptcha);
             captchaText = captcha.CaptchaText;
+        }
+        private void TogglePasswordVisibility(object sender, RoutedEventArgs e)
+        {
+            if (!isPasswordVisible)
+            {
+                // Если пароль скрыт, показываем его
+                TempTextBox.Text = PasswordTextBox.Password; // Копируем пароль из PasswordBox в TextBox
+                TempTextBox.Visibility = Visibility.Visible; // Отображаем TextBox
+                PasswordTextBox.Visibility = Visibility.Collapsed; // Скрываем PasswordBox
+                showPassword.Content = "👁";
+            }
+            else
+            {
+                // Если пароль видим, скрываем его
+                PasswordTextBox.Password = TempTextBox.Text; // Копируем пароль из TextBox обратно в PasswordBox
+                TempTextBox.Visibility = Visibility.Collapsed; // Скрываем TextBox
+                PasswordTextBox.Visibility = Visibility.Visible; // Отображаем PasswordBox
+                showPassword.Content = "👁";
+            }
+            // Инвертируем состояние переменной
+            isPasswordVisible = !isPasswordVisible;
         }
         private void RegenerateCaptcha(object sender, RoutedEventArgs e)
         {
