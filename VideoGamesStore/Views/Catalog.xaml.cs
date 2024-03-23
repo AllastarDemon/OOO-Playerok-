@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media.Media3D;
 using VideoGamesStore.Classes;
 using VideoGamesStore.Database;
 
@@ -47,7 +46,7 @@ namespace VideoGamesStore.Views
                 editProductButtonAdmin.Visibility = Visibility.Hidden;
                 deleteProductButton.Visibility = Visibility.Hidden;
                 addProductButtonAdmin.Visibility = Visibility.Hidden;
-                menuAddProductButtonUser.Visibility = Visibility.Hidden;
+                menuAddProductButtonAdmin.Visibility = Visibility.Hidden;
             }
             if (Helper.user != null && Helper.user.UserRole == 1)
             {

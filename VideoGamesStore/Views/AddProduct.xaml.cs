@@ -1,5 +1,4 @@
 ﻿using System.Windows;
-using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Controls;
 using VideoGamesStore.Classes;

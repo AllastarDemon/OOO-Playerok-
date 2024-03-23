@@ -6,7 +6,7 @@
         mc:Ignorable="d"
         Icon="/Resources/logo.ico"
         Title="Catalog" Height="500" Width="800">
-    <Grid>
+    <Grid Background="#171d25">
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition Height="2*"/>
@@ -26,7 +26,7 @@
                 <ColumnDefinition Width="2.5*"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <ListBox Name="listBoxVideoGames">
+            <ListBox Name="listBoxVideoGames" Background="#171d25">
                 <ListBox.ContextMenu>
                     <ContextMenu Name="menuContext">
                         <MenuItem Name="menuAddProductButtonUser" Click="AddProductButtonUser" Header="Выбрать игру"/>
@@ -38,32 +38,32 @@
                         <StackPanel Orientation="Horizontal">
                             <Image Source="{Binding Path=VideoGameImagePath}" Width="120" Height="120" Stretch="Uniform"/>
                             <StackPanel>
-                                <TextBlock Text="{Binding Path=VideoGameDescription, StringFormat=Описание: {0}}" Margin="15,0,0,0" FontSize="16" FontFamily="Impact"/>
-                                <TextBlock Text="{Binding Path=VideoGameName, StringFormat=Название: {0}}" Margin="15,0,0,0" FontSize="16" FontFamily="Impact"/>
-                                <TextBlock Text="{Binding Path=Category.CategoryName, StringFormat=Жанр: {0}}" Margin="15,0,0,0" FontSize="16" FontFamily="Impact"/>
-                                <TextBlock Text="{Binding Path=Developer.DeveloperName, StringFormat=Разработчик: {0}}" Margin="15,0,0,0" FontSize="16" FontFamily="Impact"/>
-                                <TextBlock Text="{Binding Path=VideoGamePrice, StringFormat=Цена: {0} руб.}" Margin="15,0,0,0" FontSize="16" FontFamily="Impact" TextDecorations="Strikethrough"/>
-                                <TextBlock Text="{Binding Path=VideoGameDiscount, StringFormat=Скидка: {0} %.}" Margin="15,0,0,0" FontSize="16" FontFamily="Impact"/>
-                                <TextBlock Text="{Binding Path=VideoGameCostWithDiscount, StringFormat=Цена со скидкой: {0} руб.}" Margin="15,0,0,0" FontSize="16" FontFamily="Impact"/>
+                                <TextBlock Text="{Binding Path=VideoGameDescription, StringFormat=Описание: {0}}" Foreground="White" Margin="15,0,0,0" FontSize="16" FontFamily="Impact"/>
+                                <TextBlock Text="{Binding Path=VideoGameName, StringFormat=Название: {0}}" Foreground="White" Margin="15,0,0,0" FontSize="16" FontFamily="Impact"/>
+                                <TextBlock Text="{Binding Path=Category.CategoryName, StringFormat=Жанр: {0}}" Foreground="White" Margin="15,0,0,0" FontSize="16" FontFamily="Impact"/>
+                                <TextBlock Text="{Binding Path=Developer.DeveloperName, StringFormat=Разработчик: {0}}" Foreground="White" Margin="15,0,0,0" FontSize="16" FontFamily="Impact"/>
+                                <TextBlock Text="{Binding Path=VideoGamePrice, StringFormat=Цена: {0} руб.}" Foreground="White" Margin="15,0,0,0" FontSize="16" FontFamily="Impact" TextDecorations="Strikethrough"/>
+                                <TextBlock Text="{Binding Path=VideoGameDiscount, StringFormat=Скидка: {0} %.}" Foreground="White" Margin="15,0,0,0" FontSize="16" FontFamily="Impact"/>
+                                <TextBlock Text="{Binding Path=VideoGameCostWithDiscount, StringFormat=Цена со скидкой: {0} руб.}" Foreground="White" Margin="15,0,0,0" FontSize="16" FontFamily="Impact"/>
                             </StackPanel>
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
             <StackPanel Grid.Column="1">
-                <TextBlock Name="countTextBox" FontSize="18" FontFamily="Impact" Text="Кол-во: " />
+                <TextBlock Foreground="White" Name="countTextBox" FontSize="18" FontFamily="Impact" Text="Кол-во: " />
                 <TextBox Name="textBoxSearch" TextChanged="TextBoxSearch" Background="black" Foreground="White" FontSize="24" FontFamily="Impact"/>
-                <TextBlock Text="Сортировать по стоимости" Style="{StaticResource TextBlockStyle}"/>
+                <TextBlock Foreground="White" Text="Сортировать по стоимости" Style="{StaticResource TextBlockStyle}"/>
                 <ComboBox Name="priceComboBox" SelectionChanged="PriceComboBox">
                     <ComboBoxItem Content="Сортировать по возрастанию"/>
                     <ComboBoxItem Content="Сортировать по убыванию"/>
                 </ComboBox>
-                <TextBlock Text="Сортировать по категориям" Style="{StaticResource TextBlockStyle}"/>
+                <TextBlock Foreground="White" Text="Сортировать по категориям" Style="{StaticResource TextBlockStyle}"/>
                 <ComboBox Name="categoryComboBox" SelectionChanged="CategoryComboBox"/>
-                <Button Name="editProductButtonAdmin" Click="EditProductButton" Width="200" Height="50" Content="Редактировать видеоигру" VerticalAlignment="Bottom" FontSize="14" FontFamily="Impact"/>
-                <Button Name="addProductButtonAdmin" Click="AddProductButtonAdmin"  Width="200" Height="50" Content="Добавить видеоигру" FontSize="14" FontFamily="Impact"/>
-                <Button Name="deleteProductButton" Click="DeleteProductButton" Width="200" Height="50" Content="Удалить видеоигру" FontSize="14" FontFamily="Impact"/>
-                <Button Name="collectingOrderButton" Click="CollectingOrderButton"  Width="200" Height="50" Content="Оформить заказ" FontSize="14" FontFamily="Impact"/>
+                <Button Background="Black" Foreground="White" Name="editProductButtonAdmin" Click="EditProductButton" Width="200" Height="50" Content="Редактировать видеоигру" VerticalAlignment="Bottom" FontSize="14" FontFamily="Impact"/>
+                <Button Background="Black" Foreground="White" Name="addProductButtonAdmin" Click="AddProductButtonAdmin"  Width="200" Height="50" Content="Добавить видеоигру" FontSize="14" FontFamily="Impact"/>
+                <Button Background="Black" Foreground="White" Name="deleteProductButton" Click="DeleteProductButton" Width="200" Height="50" Content="Удалить видеоигру" FontSize="14" FontFamily="Impact"/>
+                <Button Background="Black" Foreground="White" Name="collectingOrderButton" Click="CollectingOrderButton"  Width="200" Height="50" Content="Оформить заказ" FontSize="14" FontFamily="Impact"/>
             </StackPanel>
             
         </Grid>
