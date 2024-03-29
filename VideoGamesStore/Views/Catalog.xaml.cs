@@ -28,10 +28,24 @@ namespace VideoGamesStore.Views
         public Catalog(Authorization authorization)
         {
             InitializeComponent();
+            MessageBox.Show("Вы зашли под ролью: " + Helper.user.UserRole);
             auth = authorization;
             sort = "ASC";
             LoadCategoryIntoComboBox();
             ShowProduct();
+
+            checkRole();
+            
+        }
+        public Catalog()
+        {
+            InitializeComponent();
+            ShowProduct();
+
+            checkRole();
+        }
+        private void checkRole()
+        {
             if (Helper.user == null)
             {
                 editProductButtonAdmin.Visibility = Visibility.Hidden;
@@ -53,11 +67,6 @@ namespace VideoGamesStore.Views
                 collectingOrderButton.Visibility = Visibility.Hidden;
                 menuAddProductButtonUser.Visibility = Visibility.Hidden;
             }
-        }
-        public Catalog()
-        {
-            InitializeComponent();
-            ShowProduct();
         }
         private void ShowProduct()
         {
