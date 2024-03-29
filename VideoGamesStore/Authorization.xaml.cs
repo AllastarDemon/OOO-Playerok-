@@ -85,7 +85,11 @@ namespace VideoGamesStore
                     
                 }
                 else
+                {
                     MessageBox.Show("Неверный логин или пароль");
+                    System.Threading.Thread.Sleep(10000);
+                }
+                    
             }
             
         }
