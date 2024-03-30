@@ -8,9 +8,6 @@ using VideoGamesStore.Database;
 
 namespace VideoGamesStore.Views
 {
-    /// <summary>
-    /// Логика взаимодействия для Catalog.xaml
-    /// </summary>
     public partial class Catalog : Window
     {
         private Authorization auth;
@@ -21,10 +18,10 @@ namespace VideoGamesStore.Views
         List<VideoGame> videoGamesInOrder = new List<VideoGame>();
         int videoGameCount = 0;
         double[,] arrayDiscount = new double[,] { { 0, 100 }, { 10, 30 }, { 35, 40 }, { 45, 60 }, { 60, 100 } };
-        int filterDiscount, filterCategory;     //Фильтр по скидке и категории
-        string sort;          //Направление сортировки
-        int countFilter;      //Количество всех записей и после фильтрации
-        string searchVideoGame;      //Строка поиска
+        int filterDiscount, filterCategory;     
+        string sort;          
+        int countFilter;      
+        string searchVideoGame;      
         public Catalog(Authorization authorization)
         {
             InitializeComponent();

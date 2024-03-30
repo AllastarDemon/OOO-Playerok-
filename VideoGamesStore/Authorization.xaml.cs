@@ -4,7 +4,6 @@ using VideoGamesStore.Classes;
 using VideoGamesStore.Views;
 using EasyCaptcha.Wpf;
 using System;
-using System.Windows.Controls;
 
 namespace VideoGamesStore
 {
