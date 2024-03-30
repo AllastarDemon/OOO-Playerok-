@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
@@ -12,6 +13,8 @@ namespace VideoGamesStore.Views
         List<VideoGame> videogames;
         Random random = new Random();
         private Catalog formCatalog;
+        DocumentPage pdfFile;
+        string pathToPdfFile = "@F:\\Programming\\VideoGamesStore\\VideoGamesStore\\Documents";
         public Basket(Catalog catalog, List<VideoGame> videogames)
         {
             InitializeComponent();
@@ -60,6 +63,21 @@ namespace VideoGamesStore.Views
         private void ButtonOrder(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Заказ успешно выполнен и скоро вам будет отправлен на почту чек! Или не будет...");
+
+            // Создание PDF документа
+            PdfWriter.GetInstance(pdfFile, new FileStream(pathToPdfFile, FileMode.Create));
+            pdfFile.Open();
+
+            // Добавление данных заказа в PDF
+            Paragraph paragraph = new Paragraph("Данные заказа:");
+            pdfFile.Add(paragraph);
+
+            pdfFile.Add(new Paragraph($"Название видеоигры: {gameTitle}"));
+            pdfFile.Add(new Paragraph($"Цена: {price}")); // Можно форматировать цену по вашим требованиям
+            // Добавьте другие данные заказа по вашему усмотрению
+
+            pdfFile.Close();
+
             Close();
         }
     }

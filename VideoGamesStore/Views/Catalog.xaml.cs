@@ -81,7 +81,7 @@ namespace VideoGamesStore.Views
                 videoGames = videoGames.Where(x => x.VideoGameCategory == filterCategory).ToList();
 
             if (!String.IsNullOrEmpty(searchVideoGame))
-                videoGames = videoGames.Where(x => x.VideoGameName.Contains(searchVideoGame)).ToList();
+                videoGames = videoGames.Where(x => x.VideoGameName.ToLower().Contains(searchVideoGame.ToLower())).ToList();
 
             if (sort == "ASC")
                 videoGames = videoGames.OrderBy(x => x.VideoGamePrice).ToList();
