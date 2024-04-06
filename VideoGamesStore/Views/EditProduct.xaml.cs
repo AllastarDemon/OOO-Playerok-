@@ -45,17 +45,22 @@ namespace VideoGamesStore.Views
             
             VideoGame editVideoGame = Helper.DB.VideoGame.FirstOrDefault(x => x.VideoGameID == videogame.VideoGameID);
             editVideoGame.VideoGameName = TitleTextBox.Text;
-            editVideoGame.VideoGamePrice = Convert.ToDouble(PriceTextBox.Text);
+            try
+            {
+                editVideoGame.VideoGamePrice = Convert.ToUInt32(PriceTextBox.Text);
+                MessageBox.Show("Изменения сохранены.");
+                Helper.DB.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Изменения не сохранены.");
+            }
             editVideoGame.VideoGameDiscount = Convert.ToDouble(DiscountTextBox.Text);
             editVideoGame.VideoGameDescription = DescriptionTextBox.Text;
             editVideoGame.VideoGameDeveloper = (developerComboBox.SelectedItem as Developer).DeveloperID;
             editVideoGame.VideoGameCategory = (categoryComboBox.SelectedItem as Category).CategoryID;
-            try
-            {
-                Helper.DB.SaveChanges();
-                MessageBox.Show("Получилось");
-            }
-            catch (Exception ex) { MessageBox.Show("Не получилось"); }
+
+            Helper.DB.SaveChanges();
         }
         private void ButtonOpenDialog(object sender, RoutedEventArgs e)
         {

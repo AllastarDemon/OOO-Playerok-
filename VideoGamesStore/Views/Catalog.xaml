@@ -57,6 +57,7 @@
                 <ComboBox Name="priceComboBox" SelectionChanged="PriceComboBox">
                     <ComboBoxItem Content="Сортировать по возрастанию"/>
                     <ComboBoxItem Content="Сортировать по убыванию"/>
+                    <ComboBoxItem Content="Без категории"/>
                 </ComboBox>
                 <TextBlock Foreground="White" Text="Сортировать по категориям" Style="{StaticResource TextBlockStyle}"/>
                 <ComboBox Name="categoryComboBox" SelectionChanged="CategoryComboBox"/>

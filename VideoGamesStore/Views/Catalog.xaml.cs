@@ -82,9 +82,10 @@ namespace VideoGamesStore.Views
 
             if (sort == "ASC")
                 videoGames = videoGames.OrderBy(x => x.VideoGamePrice).ToList();
-
-            else
+            else if (sort == "DESC")
                 videoGames = videoGames.OrderByDescending(x => x.VideoGamePrice).ToList();
+            else
+                videoGames = videoGames.OrderBy(x => x.VideoGameID).ToList();
 
             countFilter = videoGames.Count();
             countTextBox.Text = + countFilter + " из " + videoGameCount;
@@ -125,7 +126,8 @@ namespace VideoGamesStore.Views
         private void PriceComboBox(object sender, SelectionChangedEventArgs e)
         {
             if (priceComboBox.SelectedIndex == 0) sort = "ASC";
-            else sort = "DESC";
+            if (priceComboBox.SelectedIndex == 1) sort = "DESC";
+            if (priceComboBox.SelectedIndex == 2) sort = "all";
             ShowProduct();
 
         }

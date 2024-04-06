@@ -27,18 +27,24 @@ namespace VideoGamesStore.Views
         {
             VideoGame addVideoGame = new VideoGame();
             addVideoGame.VideoGameName = TitleTextBox.Text;
-            addVideoGame.VideoGamePrice = Convert.ToDouble(PriceTextBox.Text);
+
+            try
+            {
+                addVideoGame.VideoGamePrice = Convert.ToUInt32(PriceTextBox.Text);
+                MessageBox.Show("Изменения сохранены");
+                Helper.DB.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Изменения не сохранены");
+            }
             addVideoGame.VideoGameDiscount = Convert.ToDouble(DiscountTextBox.Text);
             addVideoGame.VideoGameDescription = DescriptionTextBox.Text;
             addVideoGame.VideoGameDeveloper = (developerComboBox.SelectedItem as Developer).DeveloperID;
             addVideoGame.VideoGameCategory = (categoryComboBox.SelectedItem as Category).CategoryID;
             Helper.DB.VideoGame.Add(addVideoGame);
-            try
-            {
-                Helper.DB.SaveChanges();
-                MessageBox.Show("Получилось");
-            }
-            catch (Exception ex) { MessageBox.Show("Не получилось"); }
+
+            Helper.DB.SaveChanges();
         }
         private void LoadDevelopersIntoComboBox(object sender, SelectionChangedEventArgs e)
         {
